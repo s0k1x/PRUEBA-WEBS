@@ -1,1 +1,0 @@
-{ "name": "vigilante", "version": "0.1.0", "description": "Avisa cuando la cache del prompt se ha enfriado antes de enviar tu mensaje.", "types": "./types/index.d.ts" }

@@ -1,0 +1,14 @@
+{
+  "name": "kit-completo",
+  "owner": {
+    "name": "s0k1x"
+  },
+  "plugins": [
+    {
+      "name": "kit-completo",
+      "source": "./",
+      "description": "Kit unificado de skills de diseno, escritura, tokens e ingenieria con la skill kit-maestro como coordinadora."
+    }
+  ],
+  "description": "Kit unificado de skills de diseno web, escritura, tokens e ingenieria."
+}

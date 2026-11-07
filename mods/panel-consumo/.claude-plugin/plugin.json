@@ -1,1 +1,0 @@
-{ "name": "panel-consumo", "version": "0.1.0", "description": "Panel con lo que gasta cada agente (principal y subagentes). Comando /consumo.", "types": "./types/index.d.ts" }
