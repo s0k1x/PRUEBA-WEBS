@@ -13,11 +13,23 @@
       "skillPath": "skills/taste-skill/SKILL.md",
       "computedHash": "23b3930015c478034b222e1a015da03a962c8ab48aee9fb4f3f69d977034feaa"
     },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "1e67c3a4a675bd0c961b1fd8ebb718174f9a61a547d9bedad2ade5eb99cce831"
+    },
     "impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
       "skillPath": ".agents/skills/impeccable/SKILL.md",
       "computedHash": "c671292d4973a711bc857fc619f015f533ca9b49afc78c25c23d5b0811194bbf"
+    },
+    "napkin": {
+      "source": "blader/napkin",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "cbf334225ff185844c4f947cfec40c47fd292b4a06d8894b5a697e532b5cf53f"
     }
   }
 }
