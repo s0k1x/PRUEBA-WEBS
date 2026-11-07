@@ -1,6 +1,13 @@
 ---
 name: s0k1x-componentes
-description: Construye componentes y recursos web bonitos y con oficio, que no parezcan genéricos ni "hechos por IA": botones, tarjetas, inputs, navegación, heros, precios, testimonios, galerías, fondos, iconos y texturas. Aplica las técnicas que usan los mejores componentes de la comunidad (21st.dev, Uiverse, registros de shadcn): capas de luz, estados cuidados, microinteracciones con propósito, materiales y detalle tipográfico. Úsala al crear o pulir cualquier pieza de una web o landing, o cuando el usuario diga que algo se ve genérico, plano, soso o "de plantilla".
+description: >-
+  Construye componentes y recursos web bonitos y con oficio, que no parezcan genéricos ni
+  "hechos por IA": botones, tarjetas, inputs, navegación, heros, precios, testimonios,
+  galerías, fondos, iconos y texturas. Aplica las técnicas que usan los mejores componentes
+  de la comunidad (21st.dev, Uiverse, registros de shadcn): capas de luz, estados cuidados,
+  microinteracciones con propósito, materiales y detalle tipográfico. Úsala al crear o pulir
+  cualquier pieza de una web o landing, o cuando el usuario diga que algo se ve genérico,
+  plano, soso o "de plantilla".
 ---
 
 # s0k1x-componentes

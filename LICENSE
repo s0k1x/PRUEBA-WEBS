@@ -6,8 +6,9 @@ Copyright (c) 2026 s0k1x. Todos los derechos reservados.
 1. OBRA PROTEGIDA
 
 Esta licencia cubre la "Obra Propia": todos los archivos de este repositorio
-creados por s0k1x, en concreto skills/s0k1x-skill/, agents/, hooks/, types/,
-.claude-plugin/, docs/, README.md, AVISOS.md y esta licencia, así como la
+creados por s0k1x, en concreto skills/s0k1x-skill/, skills/s0k1x-componentes/,
+agents/, hooks/, types/, plugins/, tools/, .claude-plugin/, docs/, README.md,
+AVISOS.md y esta licencia, así como la
 selección, organización, nombres y coordinación del conjunto del kit.
 
 Los componentes de terceros incluidos en las demás carpetas de skills/ NO están
@@ -20,7 +21,8 @@ esos componentes.
 Se concede a cada persona que obtenga una copia legítima un permiso limitado,
 personal, no exclusivo, intransferible y revocable para:
 
-  a) instalar el plugin s0k1x-skill en Claude Code desde el repositorio oficial
+  a) instalar el plugin s0k1x-skill, o cualquiera de sus plugins individuales,
+     en Claude Code desde el repositorio oficial
      (https://github.com/s0k1x/prueba-webs) mediante los comandos de
      instalación publicados, y
   b) usarlo tal cual, sin cambios, en sus propios proyectos.

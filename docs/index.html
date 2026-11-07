@@ -73,9 +73,9 @@
 <body>
 <main>
   <header>
-    <div class="brand">s0k1x-skill · v1.0.0</div>
+    <div class="brand">s0k1x-skill · v1.1.0</div>
     <h1>Un kit de skills.<br>Una sola skill al mando.</h1>
-    <p class="lead">34 skills para Claude Code que funcionan juntas: diseño web, textos naturales, animaciones, ahorro de tokens e ingeniería. Tú pides la tarea; <code class="inline">s0k1x-skill</code> decide qué usar y en qué orden.</p>
+    <p class="lead">35 skills para Claude Code que funcionan juntas o por separado: diseño web, componentes con oficio, textos naturales, animaciones, ahorro de tokens e ingeniería. Tú pides la tarea; <code class="inline">s0k1x-skill</code> decide qué usar y en qué orden.</p>
   </header>
 
   <section id="instalar">
@@ -85,6 +85,9 @@
     <div class="cmd"><code>/plugin install s0k1x-skill@s0k1x-skill</code><button type="button">Copiar</button></div>
     <p class="note">En Claude Code 2.1.275 o posterior también puedes hacerlo en un paso:</p>
     <div class="cmd"><code>/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs</code><button type="button">Copiar</button></div>
+    <p style="margin-top:20px">¿Solo quieres una skill? Cada una se instala por separado, con lo que necesita para funcionar:</p>
+    <div class="cmd"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button type="button">Copiar</button></div>
+    <p class="note">Cambia <code class="inline">s0k1x-componentes</code> por cualquier skill de la lista. Instala el kit completo o skills sueltas, no las dos cosas, para no tener la misma skill repetida. La coordinadora y los mods vienen solo con el kit.</p>
   </section>
 
   <section id="descargar">
@@ -99,6 +102,7 @@
     <p>Pide la tarea con normalidad, por ejemplo "hazme una web para una peluquería". Para una web nueva, el kit sigue este orden:</p>
     <ol class="flow">
       <li><span><strong>s0k1x-estilo</strong>: elige el estilo, las fotos y las referencias, y hace la primera versión.</span></li>
+      <li><span><strong>s0k1x-componentes</strong>: construye cada pieza con oficio: estados, luz, material y recursos propios.</span></li>
       <li><span><strong>s0k1x-humano</strong>: reescribe los textos para que suenen naturales.</span></li>
       <li><span><strong>s0k1x-movimiento</strong>: añade solo las animaciones con sentido.</span></li>
       <li><span><strong>s0k1x-pulido</strong>: revisa jerarquía, accesibilidad y móvil.</span></li>
@@ -110,7 +114,7 @@
   <section id="skills">
     <h2>Qué incluye</h2>
     <div class="grid">
-      <div class="card"><h3>Diseño web</h3><ul><li>s0k1x-estilo</li><li>s0k1x-pulido</li><li>s0k1x-movimiento</li></ul></div>
+      <div class="card"><h3>Diseño web</h3><ul><li>s0k1x-estilo</li><li>s0k1x-componentes</li><li>s0k1x-pulido</li><li>s0k1x-movimiento</li></ul></div>
       <div class="card"><h3>Textos</h3><ul><li>s0k1x-humano</li></ul></div>
       <div class="card"><h3>Ingeniería</h3><ul><li>s0k1x-investigar</li><li>s0k1x-parche</li><li>s0k1x-construir</li><li>s0k1x-refactor</li><li>s0k1x-migrar</li><li>s0k1x-verificar</li></ul></div>
       <div class="card"><h3>Tokens y contexto</h3><ul><li>s0k1x-tokens</li><li>s0k1x-tokens-panel</li><li>s0k1x-tokens-coach</li><li>s0k1x-tokens-salida</li><li>s0k1x-flota</li><li>s0k1x-retomar</li></ul></div>

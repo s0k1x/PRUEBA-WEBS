@@ -22,7 +22,7 @@
 | `s0k1x-breve`, `s0k1x-breve-ultra` (`ultracave`), `s0k1x-breve-mega` (`megacave`), `s0k1x-breve-commit`, `-comprimir`, `-descubrir`, `-evidencias`, `-explorar`, `-ayuda`, `-aprender`, `-gestionar`, `-optimizar`, `-revisar`, `-configurar`, `-stats`, `s0k1x-equipo`, `s0k1x-investigar`, `s0k1x-construir`, `s0k1x-migrar`, `s0k1x-refactor`, `s0k1x-parche`, `s0k1x-verificar` | `caveman`, `caveman-*`, `cavecrew`, `investigate-first`, `lean-build`, `migration`, `safe-refactor`, `surgical-patch`, `verify-and-stop` | JuliusBrussee — https://github.com/JuliusBrussee/caveman | ver repositorio original |
 | `s0k1x-tokens`, `s0k1x-tokens-salida`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar` | `token-optimizer`, `token-optimizer-output`, `token-coach`, `token-dashboard`, `fleet-auditor`, `resume-checkpoint` | alexgreensh — https://github.com/alexgreensh/token-optimizer | **PolyForm Noncommercial: no permite uso comercial** |
 
-`s0k1x-skill`, los subagentes de `agents/` (una reimplementación propia de los contratos de salida de `s0k1x-equipo`), los mods de `hooks/` y los manifiestos son obra de este kit (licencia de uso restringido: ver `LICENSE`). La licencia restringida de `LICENSE` no se aplica a los componentes de terceros de esta tabla, que se rigen por la suya.
+`s0k1x-skill`, `s0k1x-componentes`, el generador `tools/generar-plugins.py` y los plugins individuales de `plugins/`, los subagentes de `agents/` (una reimplementación propia de los contratos de salida de `s0k1x-equipo`), los mods de `hooks/` y los manifiestos son obra de este kit (licencia de uso restringido: ver `LICENSE`). La licencia restringida de `LICENSE` no se aplica a los componentes de terceros de esta tabla, que se rigen por la suya.
 
 ## Servicio externo
 

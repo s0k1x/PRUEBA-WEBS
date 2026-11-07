@@ -1,12 +1,12 @@
 # s0k1x-skill
 
-Un único plugin de Claude Code que reúne 33 skills, 3 subagentes y 3 mods. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
+Un plugin de Claude Code que reúne 35 skills, 3 subagentes y 3 mods. Puedes instalarlo entero o instalar cada skill por separado. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
 
 ## Qué incluye
 
 | Área | Skills |
 |---|---|
-| Diseño web | `s0k1x-estilo`, `s0k1x-pulido`, `s0k1x-movimiento` (animaciones) |
+| Diseño web | `s0k1x-estilo`, `s0k1x-componentes` (piezas con oficio, no genéricas), `s0k1x-pulido`, `s0k1x-movimiento` (animaciones) |
 | Escritura | `s0k1x-humano` |
 | Respuestas escuetas y ahorro | `s0k1x-breve`, `s0k1x-breve-ultra`, `s0k1x-breve-mega`, `s0k1x-breve-commit`, `s0k1x-breve-revisar`, `s0k1x-breve-explorar`, `s0k1x-breve-stats`, `s0k1x-breve-comprimir`, `s0k1x-breve-ayuda`, `s0k1x-equipo` |
 | Nube externa (opcional, servicio de terceros) | `s0k1x-breve-configurar`, `s0k1x-breve-descubrir`, `s0k1x-breve-evidencias`, `s0k1x-breve-gestionar`, `s0k1x-breve-optimizar`, `s0k1x-breve-aprender` |
@@ -38,6 +38,19 @@ O en un paso, en Claude Code 2.1.275 o posterior:
 ```
 /plugin install s0k1x-skill --marketplace s0k1x/prueba-webs
 ```
+
+### Instalar solo una skill
+
+Después de añadir el marketplace, instala la skill que quieras por su nombre:
+
+```
+/plugin install s0k1x-componentes@s0k1x-skill
+/plugin install s0k1x-pulido@s0k1x-skill
+```
+
+Cada skill es un plugin propio y trae lo que necesita para funcionar: `s0k1x-flota`, `s0k1x-retomar`, `s0k1x-tokens-panel` y `s0k1x-tokens-coach` incluyen `s0k1x-tokens`, y `s0k1x-equipo` incluye sus 3 subagentes. La skill coordinadora `s0k1x-skill` y los mods solo vienen con el kit completo.
+
+Instala **el kit completo o skills sueltas, no las dos cosas**: si no, la misma skill aparece dos veces con nombres distintos.
 
 ## Descarga
 
