@@ -1,12 +1,12 @@
 ---
 name: s0k1x-breve-comprimir
 description: >
-  Compress a memory file such as CLAUDE.md or a todo list into caveman format
+  Compress a memory file such as CLAUDE.md or a todo list into s0k1x-breve format
   to save input tokens, keeping a readable backup. Sends the file's text to the
   configured model provider. Trigger: /s0k1x-breve-comprimir.
 ---
 
-# Caveman Compress
+# s0k1x-breve Compress
 
 ## Purpose
 

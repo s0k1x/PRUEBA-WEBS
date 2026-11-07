@@ -10,7 +10,7 @@ metadata:
   version: "3.1.0"
 ---
 
-# Humanizer: remove AI writing patterns
+# s0k1x-humano: remove AI writing patterns
 
 Rewrite AI-sounding text so it reads like the writer, not a chatbot. Keep what it says. Do not make anything up.
 

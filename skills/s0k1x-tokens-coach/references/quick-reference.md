@@ -65,7 +65,7 @@ A plugin's own settings.json cannot set the cache TTLs (only `agent` and `subage
 
 ## Context Quality Degradation
 
-Token Optimizer's quality score uses a published long-context retrieval curve for Claude models, as a share of the model's window. It is an estimate, not a measurement:
+s0k1x-tokens's quality score uses a published long-context retrieval curve for Claude models, as a share of the model's window. It is an estimate, not a measurement:
 
 | Window filled | Estimated retrieval quality |
 |---------------|-----------------------------|
@@ -112,7 +112,7 @@ Tool Search (on by default) reduced total MCP overhead by 85-96%.
 | `CLAUDE_CODE_DISABLE_BACKGROUND_TASKS=1` | Disable background tasks | Enabled |
 | `ENABLE_CLAUDEAI_MCP_SERVERS=false` | Opt out of claude.ai cloud-synced MCP servers | Enabled |
 | `CLAUDE_CODE_MAX_OUTPUT_TOKENS` | Max output tokens per response | 16,384 |
-| `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` | Percent of the compact window used when auto-compaction fires (1-100); lower compacts earlier, and it cannot raise the threshold. Token Optimizer reports it and never changes it | unset |
+| `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` | Percent of the compact window used when auto-compaction fires (1-100); lower compacts earlier, and it cannot raise the threshold. s0k1x-tokens reports it and never changes it | unset |
 | `includeGitInstructions: false` (setting) | Same as DISABLE_GIT env var, in settings.json | true |
 | `effortLevel` (setting) | "high" maximizes quality + cost; "medium" saves 15-25% output tokens | auto |
 
@@ -144,7 +144,7 @@ Claude Code's main conversation requests a 1-hour cache on subscription billing;
 Detection: explicit_ttl = gap > effective TTL (Claude Code main conversation: 1 hour; API/SDK: 5min) AND next-turn cache_creation >= 50% of prior cached prefix. automatic_discount/explicit_storage = prior cached ratio >= 0.40, gap > TTL, next ratio < 0.10 with comparable prompt → lost cached tokens re-billed at full input vs cached rate. none = honest skip (counted, never waste).
 
 Verified remedies (per profile, exactly what the provider offers):
-- Claude Code: resume inside the cache window or batch related work, so a long pause never strands the prefix. Token Optimizer can also keep it warm automatically (opt-in, API billing only): `keepwarm-enable` (records consent + installs the macOS scheduler; verify with `keepwarm-scheduler status` / `keepwarm-tick --dry-run`). It pings the cache before expiry at ~0.1x of the prefix (vs the 1.25-2x re-write), max 2 pings per pause unless promoted, with a tripwire that auto-disables if pings stop paying for themselves. Off by default; subscription auth stays off (pings would burn quota without saving dollars). To activate on a subscription/off-billing or platform-gap machine: set `ANTHROPIC_API_KEY` and run `keepwarm-enable` (on Linux/Windows, wire `keepwarm-tick` to your own cron/timer until the scheduler ships).
+- Claude Code: resume inside the cache window or batch related work, so a long pause never strands the prefix. s0k1x-tokens can also keep it warm automatically (opt-in, API billing only): `keepwarm-enable` (records consent + installs the macOS scheduler; verify with `keepwarm-scheduler status` / `keepwarm-tick --dry-run`). It pings the cache before expiry at ~0.1x of the prefix (vs the 1.25-2x re-write), max 2 pings per pause unless promoted, with a tripwire that auto-disables if pings stop paying for themselves. Off by default; subscription auth stays off (pings would burn quota without saving dollars). To activate on a subscription/off-billing or platform-gap machine: set `ANTHROPIC_API_KEY` and run `keepwarm-enable` (on Linux/Windows, wire `keepwarm-tick` to your own cron/timer until the scheduler ships).
 - Anthropic API/SDK/agent harness: `cache_control {"type":"ephemeral","ttl":"1h"}` on stable prefixes.
 - OpenAI/Codex: keep prefix exact-match (>=1024 tok), resume within window; `prompt_cache_retention="24h"` for long-lived prefixes.
 - Gemini: explicit `cached_content` with user `ttl` (per-hour storage billed).

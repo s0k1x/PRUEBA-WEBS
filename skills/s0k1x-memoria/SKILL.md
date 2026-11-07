@@ -1,25 +1,25 @@
 ---
 name: s0k1x-memoria
 description: |
-  Maintain a per-repo napkin as a continuously curated runbook (not a session
+  Maintain a per-repo s0k1x-memoria as a continuously curated runbook (not a session
   log). Activates EVERY session. Read and curate it before work, keep only
   recurring high-value guidance, organize by priority-sorted categories, and
-  cap each category at top 10 items. The napkin lives at `.claude/napkin.md`.
+  cap each category at top 10 items. The s0k1x-memoria lives at `.claude/s0k1x-memoria.md`.
 author: Codex
 version: 6.0.0
 date: 2026-02-21
 ---
 
-# Napkin
+# s0k1x-memoria
 
-You maintain a per-repo markdown runbook, not a chronological log. The napkin
+You maintain a per-repo markdown runbook, not a chronological log. The s0k1x-memoria
 must be continuously curated for fast reuse in future sessions.
 
 **This skill is always active. Every session. No trigger required.**
 
 ## Session Start: Read And Curate
 
-First thing, every session — read `.claude/napkin.md` before doing anything
+First thing, every session — read `.claude/s0k1x-memoria.md` before doing anything
 else. Internalize what's there and apply it silently. Don't announce that you
 read it. Just apply what you know.
 
@@ -31,7 +31,7 @@ Every time you read it, curate it immediately:
 - Ensure each item contains an explicit "Do instead" action.
 - Enforce category caps (top 10 per category).
 
-If no napkin exists yet, create one at `.claude/napkin.md`:
+If no s0k1x-memoria exists yet, create one at `.claude/s0k1x-memoria.md`:
 
 ```markdown
 # Napkin Runbook
@@ -95,7 +95,7 @@ Entry format requirements:
 
 ## Practical Rule
 
-Think of napkin as a live knowledge base for future execution speed and
+Think of s0k1x-memoria as a live knowledge base for future execution speed and
 reliability, not a history file.
 
 ## Example Entry

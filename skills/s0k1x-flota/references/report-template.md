@@ -26,7 +26,7 @@ TOTAL POTENTIAL SAVINGS: $X.XX/month
 Ready to act? I can:
 1. Show detailed fix snippets for each finding
 2. Generate the fleet dashboard for visual analysis
-3. Run /token-optimizer for deeper Claude Code optimization
+3. Run /s0k1x-tokens for deeper Claude Code optimization
 ```
 
 ## Dollars on Codex and other non-Claude systems

@@ -1,9 +1,9 @@
 ---
 name: s0k1x-tokens-panel
-description: Answers what a past session cost ("the Garden session yesterday", a session id) with a priced number, and opens the Token Optimizer dashboard when asked to see it.
+description: Answers what a past session cost ("the Garden session yesterday", a session id) with a priced number, and opens the s0k1x-tokens dashboard when asked to see it.
 ---
 
-# Token Optimizer Dashboard
+# s0k1x-tokens Dashboard
 
 Answers what a session cost from the user's own words, and opens an up-to-date dashboard of context usage, quality, session history and skills. Open the dashboard only when the user asks to see it; a cost question never opens a browser.
 
@@ -56,7 +56,7 @@ while IFS= read -r _cand; do
     _best_ver="$_ver"; MEASURE_PY="$_cand"
   fi
 done <<EOF
-$(find -L "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.claude/token-optimizer" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -name measure.py -path '*token-optimizer*/scripts/measure.py' 2>/dev/null)
+$(find -L "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.claude/token-optimizer" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -name measure.py -path '*s0k1x-tokens*/scripts/measure.py' 2>/dev/null)
 EOF
 if [ -z "$MEASURE_PY" ]; then echo "[Error] measure.py not found. Is Token Optimizer installed?"; exit 1; fi
 

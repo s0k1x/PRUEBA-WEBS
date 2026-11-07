@@ -1,7 +1,7 @@
 ---
 name: s0k1x-estilo
 description: >-
-  tasteskill 2.5.0, the anti-slop frontend skill. Builds professional company websites at the level
+  s0k1x-estilo 2.5.0, the anti-slop frontend skill. Builds professional company websites at the level
   of figma.com and x.ai: plain copy, one system, one section per screen, equal edges, real
   photographs and real product UI (product renders when there are no photographs), with shader
   effects, scenes and moments only on tech, gaming and software pages, quiet micro-interactions,
@@ -11,7 +11,7 @@ description: >-
   Tailwind), or when the user says a page looks generic, templated or "AI-made".
 ---
 
-# tasteskill 2.5
+# s0k1x-estilo 2.5
 
 Build the website a good company would ship: it says plainly what is sold, shows the real thing on
 every screen, and looks made for this client, not from a template and not like an art piece.

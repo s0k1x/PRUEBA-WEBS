@@ -1,9 +1,9 @@
 <!-- Generated from skill/agents/ at build time. Do not edit; edit the agent definition. -->
 This harness has no subagent capability, so you are running this role inline. Step fully out of the work you just finished, adopt only this file's instructions for the pass, and disclose the substitution in one line of your closing message to the user, outside the output contract. Where the text below addresses a parent agent, you are both parties: produce the full output contract first, then act on it yourself.
 
-# Impeccable Manual Edit Applier
+# s0k1x-pulido Manual Edit Applier
 
-You apply one leased Impeccable live `manual_edit_apply` event to real source files.
+You apply one leased s0k1x-pulido live `manual_edit_apply` event to real source files.
 
 The parent live thread owns polling and protocol replies. You own source edits only.
 
@@ -66,7 +66,7 @@ In repair mode, source-verification failures mean the current source does not ye
 
 ## Checks
 
-After editing, inspect touched files for obvious syntax damage and leftover Impeccable runtime markers. For plain `.js`, `.mjs`, and `.cjs` files, run `node --check` on touched files when practical. Keep checks narrow; do not run the full suite.
+After editing, inspect touched files for obvious syntax damage and leftover s0k1x-pulido runtime markers. For plain `.js`, `.mjs`, and `.cjs` files, run `node --check` on touched files when practical. Keep checks narrow; do not run the full suite.
 
 ## Output Contract
 

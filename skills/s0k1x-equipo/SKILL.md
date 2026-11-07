@@ -6,9 +6,9 @@ description: >
   or using `Explore`. Their output is compressed, so main context lasts longer.
 ---
 
-Cavecrew = three subagent presets that answer in ultracave voice (tool runs: one status line in, one out; nothing between routine calls). Same job as Anthropic defaults (`Explore`, edit-style agents, reviewer); difference is the tool-result they return is compressed, so main context shrinks per delegation.
+s0k1x-equipo = three subagent presets that answer in s0k1x-breve-ultra voice (tool runs: one status line in, one out; nothing between routine calls). Same job as Anthropic defaults (`Explore`, edit-style agents, reviewer); difference is the tool-result they return is compressed, so main context shrinks per delegation.
 
-## When to use cavecrew vs alternatives
+## When to use s0k1x-equipo vs alternatives
 
 | Task | Use |
 |---|---|
@@ -20,7 +20,7 @@ Cavecrew = three subagent presets that answer in ultracave voice (tool runs: one
 | Deep code review with rationale + alternatives | `Code Reviewer` (vanilla) if installed, else main thread |
 | One-line answer you already know | Main thread, no subagent |
 
-Rule of thumb: **if you'd want the subagent's output in 1/3 the tokens, pick cavecrew. If you'd want prose, pick vanilla.**
+Rule of thumb: **if you'd want the subagent's output in 1/3 the tokens, pick s0k1x-equipo. If you'd want prose, pick vanilla.**
 
 ## Why this exists (the real win)
 
@@ -71,8 +71,8 @@ Skip investigator. Hand exact path:line to `s0k1x-equipo-constructor` directly.
 - Don't use `s0k1x-equipo-constructor` when you don't already know the file. Spawn investigator first or main thread will eat tokens passing context.
 - Don't chain `s0k1x-equipo-investigador → s0k1x-equipo-constructor` for a 5-file refactor. Builder will return `too-big.` and you'll have wasted a turn.
 - Don't ask `s0k1x-equipo-revisor` for "general feedback" — it returns findings only, no architecture opinions. Use `Code Reviewer` for that when installed.
-- Don't expect prose. Cavecrew output is structured, sometimes terse to the point of cryptic. If a human will read it directly, paraphrase.
+- Don't expect prose. s0k1x-equipo output is structured, sometimes terse to the point of cryptic. If a human will read it directly, paraphrase.
 
 ## Auto-clarity (inherited)
 
-Subagents drop caveman → normal English for security warnings, irreversible-action confirmations, and any output where fragment ambiguity could be misread. Resume caveman after.
+Subagents drop s0k1x-breve → normal English for security warnings, irreversible-action confirmations, and any output where fragment ambiguity could be misread. Resume s0k1x-breve after.

@@ -1,10 +1,10 @@
 ---
 name: s0k1x-tokens-salida
-description: Explicitly filter private captured command output using Token Optimizer. Works on its own or as the manual fallback to automatic mode. No provider accounting.
+description: Explicitly filter private captured command output using s0k1x-tokens. Works on its own or as the manual fallback to automatic mode. No provider accounting.
 argument-hint: "[existing stdout capture, stderr capture, original exit code]"
 triggers: [user]
 ---
-Use Token Optimizer only when the user invokes this skill. It does not run commands, add permissions or replace native compaction. If the user installed automatic mode (`install.sh --devin --auto`), eligible command output is already compressed by hooks and carries its own capture ID and recover command; this skill is the manual fallback for everything else.
+Use s0k1x-tokens only when the user invokes this skill. It does not run commands, add permissions or replace native compaction. If the user installed automatic mode (`install.sh --devin --auto`), eligible command output is already compressed by hooks and carries its own capture ID and recover command; this skill is the manual fallback for everything else.
 
 Keep `-I` in every filter command. It is required from the first trusted Python startup; plain invocation and direct shebang execution are unsupported.
 

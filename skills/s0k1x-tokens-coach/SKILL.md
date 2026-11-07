@@ -7,7 +7,7 @@ description: Coaches a token-efficient Claude Code or Codex setup from the user'
 
 A coaching conversation about where the user's tokens go and what to change, grounded in numbers measured on their machine. The deliverable is a short, prioritised action plan the user agrees with. For a full audit that edits their setup, hand over to `s0k1x-tokens`.
 
-Token Optimizer's own skills (`s0k1x-tokens`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar`) are the measurement layer, so leave them out of every unused-skill, archive or consolidation suggestion, however rarely they run.
+s0k1x-tokens's own skills (`s0k1x-tokens`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar`) are the measurement layer, so leave them out of every unused-skill, archive or consolidation suggestion, however rarely they run.
 
 ## 1. Collect the data
 
@@ -45,7 +45,7 @@ while IFS= read -r _cand; do
     _best_ver="$_ver"; MEASURE_PY="$_cand"
   fi
 done <<EOF
-$(find -L "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.claude/token-optimizer" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -name measure.py -path '*token-optimizer*/scripts/measure.py' 2>/dev/null)
+$(find -L "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.claude/token-optimizer" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -name measure.py -path '*s0k1x-tokens*/scripts/measure.py' 2>/dev/null)
 EOF
 if [ -z "$MEASURE_PY" ] || [ ! -f "$MEASURE_PY" ]; then echo "[Error] measure.py not found. Is Token Optimizer installed?"; exit 1; fi
 
@@ -123,7 +123,7 @@ This is a conversation. One or two findings, then a question; the user steers th
 - **Open with what hurts most.** A session quality score under 70 comes first ("quality is 58 of 100, and stale tool results are holding 40K tokens"). Otherwise a worsening trend beats a static number: falling quality, growing session length, a dropping cache hit rate.
 - **Use their numbers and name the pattern.** "47 skills cost about 4,700 tokens at every start, the 50-Skill Trap" lands; "skills cost tokens" does not.
 - **Explain the mechanism in a sentence** so the advice survives cases this skill never listed. Example: switching model mid-session throws away the prompt cache, so pick the model at the start; a cheaper model inside a subagent is fine because it has its own context.
-- **Subagent cache.** Subagents get a 5-minute cache even on a subscription. Token Optimizer measures whether 1 hour pays on this user's transcripts and recommends it (it never sets the key for them); report what `subagent-cache status` measured and its `advice:` line, including when the payoff is negative for this user's pattern. The same verdict also sits in the daily `usage_recommendations` record the dashboard's "From your own usage" section reads.
+- **Subagent cache.** Subagents get a 5-minute cache even on a subscription. s0k1x-tokens measures whether 1 hour pays on this user's transcripts and recommends it (it never sets the key for them); report what `subagent-cache status` measured and its `advice:` line, including when the payoff is negative for this user's pattern. The same verdict also sits in the daily `usage_recommendations` record the dashboard's "From your own usage" section reads.
 - **Compaction window.** Present `compact-advice` as an estimate from their own history with cost and quality side by side, and give the command it printed. Earlier compaction saves cache-read tokens on every later turn and risks losing early instructions, so the user decides. The daily `usage_recommendations` record carries the distilled `recommend`/`keep` verdict too.
 - **Usage recommendations.** When `usage_recommendations` carries a `recommend` item, lead with it: it is today's measured answer, already gated on enough data. When `wins` is non-empty, name the measured change "since you changed it" and quote both numbers; never claim the change caused it.
 - **Goal e, or any time `deterministic_candidates` is non-empty:** walk the workflow step by step and sort each step into "inputs decide the output, so plain code" and "needs judgement, so a model", following the deterministic-stages reference.
@@ -139,7 +139,7 @@ Close with three to five actions ordered by impact. Each has a bold name, one li
 - Quality under 50: `/compact` or `/clear` before more work.
 - Steps to move from a model to a script, each with the mechanism (hook, script, scheduled job).
 
-Then check the plan against the data: every figure traces to a command output or the quick reference, and no action touches Token Optimizer's own skills. Fix what fails and check again before sending.
+Then check the plan against the data: every figure traces to a command output or the quick reference, and no action touches s0k1x-tokens's own skills. Fix what fails and check again before sending.
 
 Offer `/s0k1x-tokens` when they want the changes made for them, and the dashboard (`"$PY" "$MEASURE_PY" dashboard`; on Codex quote the `Dashboard:` line it prints, never a remembered path) when they want to watch the trend.
 

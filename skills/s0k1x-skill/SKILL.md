@@ -30,7 +30,6 @@ Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando so
 
 ## Mapa completo
 
-**Excepción de nombre:** `s0k1x-tokens` está en la carpeta `token-optimizer`, porque su código usa esa ruta a mano y renombrarla puede romper sus hooks. Claude Code la lista como `s0k1x-skill:token-optimizer`. Cuando este kit diga `s0k1x-tokens`, invoca esa.
 
 **Diseño web**
 - `s0k1x-estilo`: diseña webs con dirección de arte real, sin aspecto "hecho por IA". Trae referencias, fotos y un comprobador en navegador.
@@ -68,7 +67,7 @@ Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando so
 - `s0k1x-verificar`: comprobar que se cumple lo pedido, sin ampliar el alcance.
 
 **Memoria**
-- `s0k1x-memoria`: runbook por repo en `.claude/napkin.md`; se lee al empezar cada sesión.
+- `s0k1x-memoria`: runbook por repo en `.claude/s0k1x-memoria.md`; se lee al empezar cada sesión.
 
 **Fuera del kit**
 - `skill-creator`: viene con Claude (Anthropic) y no se copia aquí. Úsala para crear o mejorar skills de este kit.

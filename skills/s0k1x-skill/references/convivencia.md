@@ -44,6 +44,6 @@ Casos donde dos skills se pisan y qué hacer en cada uno.
 
 | Situación | Qué hacer |
 |---|---|
-| Inicio de cualquier sesión | `s0k1x-memoria` lee `.claude/napkin.md` sin anunciarlo. |
+| Inicio de cualquier sesión | `s0k1x-memoria` lee `.claude/s0k1x-memoria.md` sin anunciarlo. |
 | El usuario dice que continúa un trabajo anterior | `s0k1x-retomar` además de `s0k1x-memoria`. |
 | Aprendo algo útil y repetible | Va a `s0k1x-memoria`, no a CLAUDE.md. |

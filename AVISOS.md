@@ -4,25 +4,25 @@
 
 ## Qué se cambió respecto a los originales
 
-- Se renombró el campo `name` y las referencias a otras skills dentro de cada `SKILL.md` (por ejemplo `/caveman-commit` pasó a `/s0k1x-breve-commit`).
-- **No** se modificó ningún script, referencia, plantilla ni archivo de datos, para no romper su funcionamiento (varios llevan sumas de verificación o rutas escritas a mano).
-- Las carpetas de `skills/` se renombraron a `s0k1x-…` (Claude Code nombra las skills de un plugin por su carpeta), **salvo `skills/token-optimizer`**: su código usa esa ruta escrita a mano (comprobaciones de seguridad y hooks que escribe en tu configuración) y renombrarla sin pruebas podría romperlos sin avisar. Por eso esa skill aparece como `s0k1x-skill:token-optimizer`.
-- La columna "Carpeta original" de la tabla dice de dónde viene cada una.
-- Los comandos de programas externos que mencionan algunas skills (por ejemplo `caveman login`) conservan su nombre real: son comandos de otro programa, no nombres de skill.
+- Se renombraron las skills, sus carpetas y las referencias entre ellas a `s0k1x-…`, y los nombres de los productos en la prosa de los `.md`.
+- En `skills/s0k1x-tokens` se actualizaron las rutas de su propia carpeta dentro del código (antes `skills/token-optimizer/…`) y el comando que muestra su panel. Se comprobó que su análisis da el mismo resultado que el original.
+- Se borró la documentación y el empaquetado de los repos originales que no se usan para funcionar (README, CHANGELOG, manifiestos de otros programas, tests).
+- **No** se cambiaron los nombres técnicos que usan programas externos o el propio código: comandos de CLI (`caveman login`, `scripts/impeccable`), variables de entorno (`CAVEMAN_*`, `TOKEN_OPTIMIZER_*`), carpetas de datos (`~/.claude/token-optimizer`), rutas del servidor local del panel y direcciones web de descarga. Cambiarlos rompería las skills o tus datos guardados.
+- Las 6 skills de la nube externa (`s0k1x-breve-configurar`, `-descubrir`, `-evidencias`, `-gestionar`, `-optimizar`, `-aprender`) conservan el nombre del programa externo en su texto, porque es el comando que ejecutan.
 
 ## Skills incluidas
 
-| Skill en este kit | Carpeta original | Autor / origen | Licencia |
+| Skill en este kit | Nombre original | Autor / origen | Licencia |
 |---|---|---|---|
-| `s0k1x-pulido` | `skills/impeccable` | pbakaus — https://github.com/pbakaus/impeccable | ver repositorio original |
-| `s0k1x-movimiento` | `skills/design-motion-principles` | kylezantos — https://github.com/kylezantos/design-motion-principles (basada en técnicas de Emil Kowalski, Jakub Krehel y Jhey Tompkins) | ver repositorio original |
-| `s0k1x-estilo` | `skills/design-taste-frontend` | Leonxlnx — https://github.com/Leonxlnx/taste-skill | ver repositorio original |
-| `s0k1x-humano` | `skills/humanizer` | blader (Siqi Chen) — https://github.com/blader/humanizer | MIT (`skills/humanizer/LICENSE`) |
-| `s0k1x-memoria` | `skills/napkin` | blader — https://github.com/blader/napkin | MIT (`skills/napkin/LICENSE`) |
-| `s0k1x-breve`, `s0k1x-breve-ultra` (`skills/ultracave`), `s0k1x-breve-mega` (`skills/megacave`), `s0k1x-breve-commit`, `-comprimir`, `-descubrir`, `-evidencias`, `-explorar`, `-ayuda`, `-aprender`, `-gestionar`, `-optimizar`, `-revisar`, `-configurar`, `-stats`, `s0k1x-equipo`, `s0k1x-investigar`, `s0k1x-construir`, `s0k1x-migrar`, `s0k1x-refactor`, `s0k1x-parche`, `s0k1x-verificar` | `skills/caveman`, `caveman-*`, `cavecrew`, `investigate-first`, `lean-build`, `migration`, `safe-refactor`, `surgical-patch`, `verify-and-stop` | JuliusBrussee — https://github.com/JuliusBrussee/caveman | ver repositorio original |
-| `s0k1x-tokens`, `s0k1x-tokens-salida`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar` | `skills/token-optimizer`, `token-optimizer-output`, `token-coach`, `token-dashboard`, `fleet-auditor`, `resume-checkpoint` | alexgreensh — https://github.com/alexgreensh/token-optimizer | **PolyForm Noncommercial: no permite uso comercial** |
+| `s0k1x-pulido` | `impeccable` | pbakaus — https://github.com/pbakaus/impeccable | ver repositorio original |
+| `s0k1x-movimiento` | `design-motion-principles` | kylezantos — https://github.com/kylezantos/design-motion-principles (basada en técnicas de Emil Kowalski, Jakub Krehel y Jhey Tompkins) | ver repositorio original |
+| `s0k1x-estilo` | `design-taste-frontend` | Leonxlnx — https://github.com/Leonxlnx/taste-skill | ver repositorio original |
+| `s0k1x-humano` | `humanizer` | blader (Siqi Chen) — https://github.com/blader/humanizer | MIT (`skills/s0k1x-humano/LICENSE`) |
+| `s0k1x-memoria` | `napkin` | blader — https://github.com/blader/napkin | MIT (`skills/s0k1x-memoria/LICENSE`) |
+| `s0k1x-breve`, `s0k1x-breve-ultra` (`ultracave`), `s0k1x-breve-mega` (`megacave`), `s0k1x-breve-commit`, `-comprimir`, `-descubrir`, `-evidencias`, `-explorar`, `-ayuda`, `-aprender`, `-gestionar`, `-optimizar`, `-revisar`, `-configurar`, `-stats`, `s0k1x-equipo`, `s0k1x-investigar`, `s0k1x-construir`, `s0k1x-migrar`, `s0k1x-refactor`, `s0k1x-parche`, `s0k1x-verificar` | `caveman`, `caveman-*`, `cavecrew`, `investigate-first`, `lean-build`, `migration`, `safe-refactor`, `surgical-patch`, `verify-and-stop` | JuliusBrussee — https://github.com/JuliusBrussee/caveman | ver repositorio original |
+| `s0k1x-tokens`, `s0k1x-tokens-salida`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar` | `token-optimizer`, `token-optimizer-output`, `token-coach`, `token-dashboard`, `fleet-auditor`, `resume-checkpoint` | alexgreensh — https://github.com/alexgreensh/token-optimizer | **PolyForm Noncommercial: no permite uso comercial** |
 
-`s0k1x-skill` (`skills/s0k1x-skill`), los subagentes de `agents/` (una reimplementación propia de los contratos de salida de `s0k1x-equipo`), los mods de `hooks/` y los manifiestos son obra de este kit (ver `LICENSE`).
+`s0k1x-skill`, los subagentes de `agents/` (una reimplementación propia de los contratos de salida de `s0k1x-equipo`), los mods de `hooks/` y los manifiestos son obra de este kit (ver `LICENSE`).
 
 ## Servicio externo
 

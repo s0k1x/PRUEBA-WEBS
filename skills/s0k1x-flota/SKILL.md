@@ -5,7 +5,7 @@ description: "Audits token waste and cost across Claude Code, Codex, OpenClaw, H
 
 # Fleet Auditor: Cross-Platform Agent Token Waste Auditor
 
-Token Optimizer's own skills (`s0k1x-tokens`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`) are the measurement layer, so leave them out of every removal, archive, trimming, disabling or consolidation suggestion; deleting them to save a few hundred tokens defeats the audit.
+s0k1x-tokens's own skills (`s0k1x-tokens`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`) are the measurement layer, so leave them out of every removal, archive, trimming, disabling or consolidation suggestion; deleting them to save a few hundred tokens defeats the audit.
 
 Detects installed agent systems, collects token usage data, identifies waste patterns, and recommends fixes with dollar savings estimates.
 
