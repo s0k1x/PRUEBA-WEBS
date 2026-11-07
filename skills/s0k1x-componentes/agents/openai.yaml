@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-componentes"
+  short_description: "Componentes y recursos web con oficio, no genéricos"
+  default_prompt: "Usa $s0k1x-componentes para construir esta pieza con estados, luz y material propios."

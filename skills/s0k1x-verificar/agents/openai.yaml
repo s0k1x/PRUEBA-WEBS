@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-verificar"
+  short_description: "Run relevant proof then stop cleanly"
+  default_prompt: "Use $s0k1x-verificar to prove acceptance criteria without adding scope."

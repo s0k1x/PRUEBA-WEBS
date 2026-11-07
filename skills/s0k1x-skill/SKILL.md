@@ -1,11 +1,26 @@
 ---
 name: s0k1x-skill
-description: Coordinador de s0k1x-skill. Úsala al empezar cualquier tarea en un proyecto con este kit, o cuando dudes qué skill usar, para elegir la skill correcta, encadenar varias (diseño web, textos, animaciones, ahorro de tokens, bugs, refactors, migraciones, memoria del repo) y resolver choques entre ellas. También cuando el usuario pida "usa el kit", "usa todas las skills" o "qué skills tienes".
+description: Coordinador de s0k1x-skill, en Claude Code o en Codex. Úsala al empezar cualquier tarea en un proyecto con este kit instalado completo, o cuando dudes qué skill usar, para elegir la skill correcta, encadenar varias (diseño web, textos, animaciones, ahorro de tokens, bugs, refactors, migraciones, memoria del repo) y resolver choques entre ellas. También cuando el usuario pida "usa el kit", "usa todas las skills" o "qué skills tienes".
 ---
 
 # s0k1x-skill
 
-Este kit junta 34 skills (más esta), 3 subagentes y 3 mods. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
+Este kit junta 34 skills (más esta), 3 subagentes y 3 mods, y funciona en **Claude Code** y en **Codex**. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
+
+Esta skill es para cuando el kit está instalado **completo**. Si solo hay algunas skills sueltas, cada una se usa por su cuenta y esta coordinación no hace falta. Antes de encadenar, mira qué skills están disponibles: si falta alguna del flujo, sáltala y sigue con las demás, sin inventar lo que haría.
+
+## Claude Code y Codex
+
+| | Claude Code | Codex |
+|---|---|---|
+| Invocar una skill | Se carga sola por su descripción, o con `/s0k1x-skill:<nombre>` (kit completo) o `/<plugin>:<nombre>` (skill suelta) | Se carga sola por su descripción, o con `$<nombre>` |
+| Dónde están | En la caché de plugins de Claude Code | En `.agents/skills/` del proyecto o en `~/.agents/skills/` |
+| Instrucciones del proyecto | `CLAUDE.md` | `AGENTS.md` |
+| Subagentes `s0k1x-equipo-*` | Sí, vienen con el kit y con `s0k1x-equipo` | No existen: haz ese trabajo en el hilo principal con el mismo formato de salida que describe `s0k1x-equipo` |
+| Mods (Portero, Vigilante, `/consumo`) | Sí, con el kit completo | No |
+| Memoria del repo | `.claude/s0k1x-memoria.md` | El mismo archivo, así las dos herramientas comparten lo aprendido |
+
+Los nombres de skills, los flujos y las reglas de este documento son los mismos en las dos herramientas. Donde una regla nombra algo exclusivo de Claude Code (subagentes, mods, el subagente `Explore` o el modelo Haiku), en Codex usa el equivalente que tengas o hazlo en el hilo principal.
 
 ## Regla de oro
 
@@ -23,8 +38,8 @@ Este kit junta 34 skills (más esta), 3 subagentes y 3 mods. Cada skill sigue fu
 | Cómo respondo en el chat (estilo escueto) | `s0k1x-breve` / `s0k1x-breve-ultra` / `s0k1x-breve-mega`, solo si el usuario lo pide | — |
 | Mensajes de commit | `s0k1x-breve-commit` si el usuario lo pide; si no, el formato del repo | — |
 | Diagnóstico de fallos | `s0k1x-investigar` | `s0k1x-breve-explorar` |
-| Cambios de código | `s0k1x-parche` (pequeño), `s0k1x-construir` (nuevo), `s0k1x-refactor` (reestructurar), `s0k1x-migrar` (transición) | `s0k1x-equipo-constructor` |
-| Revisión de diffs | `s0k1x-breve-revisar` / `s0k1x-equipo-revisor` | — |
+| Cambios de código | `s0k1x-parche` (pequeño), `s0k1x-construir` (nuevo), `s0k1x-refactor` (reestructurar), `s0k1x-migrar` (transición) | `s0k1x-equipo-constructor` (Claude Code) |
+| Revisión de diffs | `s0k1x-breve-revisar` / `s0k1x-equipo-revisor` (Claude Code) | — |
 | "¿Está terminado?" | `s0k1x-verificar` | — |
 | Gasto de tokens y contexto | `s0k1x-tokens` | `s0k1x-tokens-coach`, `s0k1x-breve-stats`, `s0k1x-flota` |
 | Memoria del repo entre sesiones | `s0k1x-memoria` | `s0k1x-retomar` |
@@ -49,7 +64,7 @@ Este kit junta 34 skills (más esta), 3 subagentes y 3 mods. Cada skill sigue fu
 - `s0k1x-breve-explorar`: explorador de solo lectura que devuelve citas `path:line`.
 - `s0k1x-breve-stats`: tokens de salida y de caché de la sesión.
 - `s0k1x-breve-comprimir`: comprime archivos de memoria como CLAUDE.md. **Envía el texto del archivo al proveedor del modelo.**
-- `s0k1x-equipo`: decide cuándo delegar en los subagentes `s0k1x-equipo-investigador`, `s0k1x-equipo-constructor` y `s0k1x-equipo-revisor` (incluidos en este kit, carpeta `agents/`).
+- `s0k1x-equipo`: decide cuándo delegar en los subagentes `s0k1x-equipo-investigador`, `s0k1x-equipo-constructor` y `s0k1x-equipo-revisor` (incluidos en este kit, carpeta `agents/`; solo en Claude Code).
 - Servicio externo (nube): `s0k1x-breve-configurar`, `s0k1x-breve-descubrir`, `s0k1x-breve-evidencias`, `s0k1x-breve-gestionar`, `s0k1x-breve-optimizar`, `s0k1x-breve-aprender`. **Pasan el tráfico LLM del proyecto por un gateway externo**, así que úsalas solo si el usuario lo pide expresamente.
 
 **Tokens y contexto**
@@ -72,7 +87,7 @@ Este kit junta 34 skills (más esta), 3 subagentes y 3 mods. Cada skill sigue fu
 - `s0k1x-memoria`: runbook por repo en `.claude/s0k1x-memoria.md`; se lee al empezar cada sesión.
 
 **Fuera del kit**
-- `skill-creator`: viene con Claude (Anthropic) y no se copia aquí. Úsala para crear o mejorar skills de este kit.
+- `skill-creator` (Claude Code): viene con Claude (Anthropic) y no se copia aquí. Úsala para crear o mejorar skills de este kit. En Codex, usa su propia herramienta para crear skills si la tiene.
 
 ## Flujos combinados
 
@@ -100,10 +115,10 @@ Más detalle en [references/convivencia.md](references/convivencia.md).
 
 1. **`s0k1x-breve` no toca entregables.** Su estilo es solo para mis respuestas en el chat. Los textos de webs, documentos y PRs los escribe `s0k1x-humano`, en el idioma del usuario.
 2. **Idioma.** Respondo en el idioma del usuario (aquí, español). `s0k1x-breve` se aplica al estilo, no cambia el idioma.
-3. **Diseño en cadena, no en paralelo.** Primero dirección (`s0k1x-estilo`), luego movimiento (`s0k1x-movimiento`), luego pulido (`s0k1x-pulido`). Si `s0k1x-pulido` propone cambiar la identidad visual que fijó `s0k1x-estilo`, solo se acepta por accesibilidad o usabilidad. `s0k1x-movimiento` trabaja dentro del nivel de movimiento que fija `s0k1x-estilo`: en un restaurante o una clínica, microinteracciones discretas; los efectos llamativos quedan para webs de tecnología o juegos.
+3. **Diseño en cadena, no en paralelo.** Primero dirección (`s0k1x-estilo`), luego piezas (`s0k1x-componentes`), luego movimiento (`s0k1x-movimiento`), luego pulido (`s0k1x-pulido`). Si `s0k1x-pulido` propone cambiar la identidad visual que fijó `s0k1x-estilo`, solo se acepta por accesibilidad o usabilidad. `s0k1x-movimiento` trabaja dentro del nivel de movimiento que fija `s0k1x-estilo`: en un restaurante o una clínica, microinteracciones discretas; los efectos llamativos quedan para webs de tecnología o juegos.
 4. **Un solo sistema de diseño.** Los tokens (colores, tipografías, espaciado) se definen una vez. Si el proyecto ya tiene `DESIGN.md` o `PRODUCT.md` de `s0k1x-pulido`, `s0k1x-estilo` y `s0k1x-movimiento` los respetan en vez de inventar otros.
-5. **`s0k1x-memoria` no se duplica.** Lo que guarda `s0k1x-memoria` no se repite en CLAUDE.md, ni al revés.
-6. **Subagentes.** Para localizar código, prefiero `s0k1x-equipo-investigador` (corre en Haiku vía el mod Portero). Para análisis con explicación, `Explore`. Si un subagente dice "No match." o "No issues.", lo compruebo una vez antes de creérmelo.
+5. **`s0k1x-memoria` no se duplica.** Lo que guarda `s0k1x-memoria` no se repite en `CLAUDE.md` ni en `AGENTS.md`, ni al revés.
+6. **Subagentes.** En Claude Code, para localizar código prefiero `s0k1x-equipo-investigador` (corre en Haiku vía el mod Portero), y para análisis con explicación, `Explore`. En Codex, usa `s0k1x-breve-explorar` en el hilo principal. Si un subagente dice "No match." o "No issues.", lo compruebo una vez antes de creérmelo.
 7. **Revisión única.** Para un mismo diff uso una revisión: `s0k1x-breve-revisar` en el hilo principal o `s0k1x-equipo-revisor` delegado, no las dos.
 
 ## Requieren permiso explícito del usuario
@@ -113,7 +128,7 @@ Más detalle en [references/convivencia.md](references/convivencia.md).
 - Los arreglos de `s0k1x-tokens` y `s0k1x-breve-aprender` que editan la configuración.
 - `s0k1x-pulido hooks on`, que instala un hook de detección en el proyecto. El lanzador de `s0k1x-pulido` puede descargar un binario la primera vez; si falla o se bloquea, sigue su modo sin lanzador.
 
-## Mods incluidos (hooks del plugin)
+## Mods incluidos (solo Claude Code, kit completo)
 
 - **Portero**: manda a Haiku los subagentes de tareas fáciles (`Explore`, `web-fetch`, `claude-code-guide`, `statusline-setup`, `s0k1x-equipo-investigador`) cuando no tienen modelo fijado.
 - **Vigilante**: si pasan más de 5 minutos desde el último turno y el contexto supera los 50.000 tokens, avisa de que el siguiente mensaje se releerá sin caché.

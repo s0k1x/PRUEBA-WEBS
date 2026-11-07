@@ -6,6 +6,7 @@
 
 - Se renombraron las skills, sus carpetas y las referencias entre ellas a `s0k1x-…`, y los nombres de los productos en la prosa de los `.md`.
 - En `skills/s0k1x-tokens` se actualizaron las rutas de su propia carpeta dentro del código (antes `skills/token-optimizer/…`) y el comando que muestra su panel. Se comprobó que su análisis da el mismo resultado que el original.
+- Para que funcionen también en Codex y con `npx skills`, se **añadieron** las carpetas `./.agents/skills`, `./.claude/skills` y `~/.agents/skills` a la búsqueda de scripts de `s0k1x-tokens`, `s0k1x-tokens-panel`, `s0k1x-tokens-coach`, `s0k1x-flota` y `s0k1x-retomar`, sin quitar ninguna de las originales. Se conservan los metadatos de Codex (`agents/openai.yaml`) con los nombres nuevos.
 - Se borró la documentación y el empaquetado de los repos originales que no se usan para funcionar (README, CHANGELOG, manifiestos de otros programas, tests).
 - **No** se cambiaron los nombres técnicos que usan programas externos o el propio código: comandos de CLI (`caveman login`, `scripts/impeccable`), variables de entorno (`CAVEMAN_*`, `TOKEN_OPTIMIZER_*`), carpetas de datos (`~/.claude/token-optimizer`), rutas del servidor local del panel y direcciones web de descarga. Cambiarlos rompería las skills o tus datos guardados.
 - Las 6 skills de la nube externa (`s0k1x-breve-configurar`, `-descubrir`, `-evidencias`, `-gestionar`, `-optimizar`, `-aprender`) conservan el nombre del programa externo en su texto, porque es el comando que ejecutan.

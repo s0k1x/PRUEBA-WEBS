@@ -1,6 +1,6 @@
 # s0k1x-skill
 
-Un plugin de Claude Code que reúne 35 skills, 3 subagentes y 3 mods. Puedes instalarlo entero o instalar cada skill por separado. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
+Un kit de 35 skills para **Claude Code** y **Codex**, con 3 subagentes y 3 mods para Claude Code. Puedes instalarlo entero, y entonces la skill `s0k1x-skill` coordina todas las demás, o instalar cada skill por separado. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
 
 ## Qué incluye
 
@@ -24,9 +24,9 @@ Un plugin de Claude Code que reúne 35 skills, 3 subagentes y 3 mods. Puedes ins
 
 `skill-creator` no está incluida porque ya viene con Claude.
 
-## Instalación
+## Instalación en Claude Code
 
-En Claude Code:
+Kit completo:
 
 ```
 /plugin marketplace add s0k1x/prueba-webs
@@ -51,6 +51,29 @@ Después de añadir el marketplace, instala la skill que quieras por su nombre:
 Cada skill es un plugin propio y trae lo que necesita para funcionar: `s0k1x-flota`, `s0k1x-retomar`, `s0k1x-tokens-panel` y `s0k1x-tokens-coach` incluyen `s0k1x-tokens`, y `s0k1x-equipo` incluye sus 3 subagentes. La skill coordinadora `s0k1x-skill` y los mods solo vienen con el kit completo.
 
 Instala **el kit completo o skills sueltas, no las dos cosas**: si no, la misma skill aparece dos veces con nombres distintos.
+
+## Instalación en Codex
+
+Codex usa las skills desde `.agents/skills/` del proyecto (o `~/.agents/skills/` con `-g`). Se instalan con `npx skills`:
+
+```
+# Todas, con la coordinadora s0k1x-skill
+npx skills add s0k1x/prueba-webs -a codex -s '*'
+
+# Solo una
+npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes
+
+# Para todos tus proyectos, añade -g
+npx skills add s0k1x/prueba-webs -a codex -g -s '*'
+```
+
+Si instalas sueltas `s0k1x-flota`, `s0k1x-retomar`, `s0k1x-tokens-panel` o `s0k1x-tokens-coach`, añade también `-s s0k1x-tokens`, porque usan su código. En Codex no hay subagentes ni mods: la coordinadora explica cómo hacer ese trabajo en el hilo principal. En Codex una skill se invoca con `$nombre`, por ejemplo `$s0k1x-pulido`.
+
+Para que Codex use siempre el kit coordinado, puedes añadir esta línea al `AGENTS.md` de tu proyecto (en Claude Code, al `CLAUDE.md`):
+
+```
+Para cualquier tarea, usa la skill s0k1x-skill para elegir y encadenar las skills del kit.
+```
 
 ## Descarga
 

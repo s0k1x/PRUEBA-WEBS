@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-skill"
+  short_description: "Coordina todas las skills del kit s0k1x"
+  default_prompt: "Usa $s0k1x-skill para elegir y encadenar las skills del kit en esta tarea."

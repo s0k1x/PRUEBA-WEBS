@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-pulido"
+  short_description: "Use when the user wants to design, redesign, shape, critique, audit, polish, simplify,..."
+  default_prompt: "Use $s0k1x-pulido to redesign, critique, audit, or polish this frontend."

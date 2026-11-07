@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-refactor"
+  short_description: "Preserve behavior through structural change"
+  default_prompt: "Use $s0k1x-refactor to restructure this code while preserving behavior."
