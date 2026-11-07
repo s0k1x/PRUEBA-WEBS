@@ -108,11 +108,12 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
 @media (max-width: 1279px) { #instalar .frame { --p-h: 380px; } #skills .frame { --p-h: 460px; } #flujo .frame { --p-h: 420px; } }
 @media (min-width: 640px) and (max-width: 1023px) {
   #instalar .frame { --ratio: 52%; }
+  #skills .frame { --ratio: 100%; }
   #skills > .wrap { display: flex; flex-direction: column; align-items: stretch; } #preguntas { margin-block: auto; width: 100%; align-self: stretch; }
   #preguntas .faq { grid-column: 1 / -1; max-width: none; width: 100%; }
 }
 @media (max-width: 639px) {
-  #instalar .frame { --p-h: 260px; --ratio: 66%; } #skills .frame, #flujo .frame { --p-h: 320px; }
+  #instalar .frame { --p-h: 260px; --ratio: 66%; } #skills .frame { --p-h: 300px; --ratio: 86%; } #flujo .frame { --p-h: 320px; }
   #preguntas { margin-top: 0; }
   .t-long, .inst__opt, .tab-panels p, .pc-chat__more { display: none; }
   .tab-panels { min-height: 0; }
