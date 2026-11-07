@@ -66,7 +66,8 @@
 .close--word .btn { height: 64px; padding-inline: var(--s-6); font-size: var(--t-lead); }
 @media (min-width: 1024px) and (max-width: 1279px) { .close--word .btn { height: 56px; font-size: var(--t-body); } }
 @media (max-width: 1023px) { .close--word .btn { height: 56px; } }
-.close__word { line-height: 1; }
+.close__word { line-height: 1; margin-bottom: var(--s-6); }
+.t-short { display: none; }
 
 /* the selected tab in the primary button's fill */
 .tab[aria-selected="true"] { background: var(--p-action); border-color: var(--p-action); color: var(--p-action-ink); }
@@ -117,6 +118,8 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
   #instalar .frame { --p-h: 260px; --ratio: 66%; } #skills .frame { --p-h: 300px; --ratio: 86%; } #flujo .frame { --p-h: 320px; }
   #preguntas { margin-top: 0; }
   .t-long, .inst__opt, .tab-panels p, .pc-chat__more { display: none; }
+  .t-short { display: inline; }
+  .closing__links .nav__logo { display: none; }
   .tab-panels { min-height: 0; }
   .hero--triptych h1 { font-size: 32px; }
   #preguntas .faq__item { padding-block: var(--s-4); }
@@ -229,7 +232,7 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
           <div class="tabs" role="tablist" aria-label="Herramienta">
             <button class="tab" type="button" role="tab" id="t-claude" aria-selected="true" aria-controls="p-claude s-claude"><img class="ic ic-16 ic-land" src="assets/icons/claude-code.svg" alt="" width="16" height="10" loading="lazy"><span class="t-long">Instalar en </span>Claude Code</button>
             <button class="tab" type="button" role="tab" id="t-codex" aria-selected="false" aria-controls="p-codex s-codex"><img class="ic ic-16 ic-ink" src="assets/icons/openai.svg" alt="" width="16" height="16" loading="lazy"><span class="t-long">Instalar en </span>Codex</button>
-            <button class="tab" type="button" role="tab" id="t-una" aria-selected="false" aria-controls="p-una s-una"><span class="t-long">Instalar </span>una skill</button>
+            <button class="tab" type="button" role="tab" id="t-una" aria-selected="false" aria-controls="p-una s-una"><span class="t-long">Instalar una skill</span><span class="t-short">Una skill</span></button>
           </div>
           <div class="tab-panels">
             <div role="tabpanel" id="p-claude" aria-labelledby="t-claude">
