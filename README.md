@@ -29,14 +29,14 @@ Un kit de 35 skills para **Claude Code** y **Codex**, con 3 subagentes y 3 mods 
 Kit completo:
 
 ```
-/plugin marketplace add s0k1x/prueba-webs
+/plugin marketplace add s0k1x/s0k1x-skill
 /plugin install s0k1x-skill@s0k1x-skill
 ```
 
 O en un paso, en Claude Code 2.1.275 o posterior:
 
 ```
-/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs
+/plugin install s0k1x-skill --marketplace s0k1x/s0k1x-skill
 ```
 
 ### Instalar solo una skill
@@ -58,13 +58,13 @@ Codex usa las skills desde `.agents/skills/` del proyecto (o `~/.agents/skills/`
 
 ```
 # Todas, con la coordinadora s0k1x-skill
-npx skills add s0k1x/prueba-webs -a codex -s '*'
+npx skills add s0k1x/s0k1x-skill -a codex -s '*'
 
 # Solo una
-npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes
+npx skills add s0k1x/s0k1x-skill -a codex -s s0k1x-componentes
 
 # Para todos tus proyectos, añade -g
-npx skills add s0k1x/prueba-webs -a codex -g -s '*'
+npx skills add s0k1x/s0k1x-skill -a codex -g -s '*'
 ```
 
 Si instalas sueltas `s0k1x-flota`, `s0k1x-retomar`, `s0k1x-tokens-panel` o `s0k1x-tokens-coach`, añade también `-s s0k1x-tokens`, porque usan su código. En Codex no hay subagentes ni mods: la coordinadora explica cómo hacer ese trabajo en el hilo principal. En Codex una skill se invoca con `$nombre`, por ejemplo `$s0k1x-pulido`.
@@ -78,10 +78,10 @@ Para cualquier tarea, usa la skill s0k1x-skill para elegir y encadenar las skill
 ## Descarga
 
 ```
-git clone https://github.com/s0k1x/prueba-webs.git
+git clone https://github.com/s0k1x/s0k1x-skill.git
 ```
 
-O descarga el [ZIP](https://github.com/s0k1x/prueba-webs/archive/refs/heads/main.zip). Para probarlo sin instalarlo, desde la carpeta descargada: `claude --plugin-dir .`
+O descarga el [ZIP](https://github.com/s0k1x/s0k1x-skill/archive/refs/heads/main.zip). Para probarlo sin instalarlo, desde la carpeta descargada: `claude --plugin-dir .`
 
 ## Web
 

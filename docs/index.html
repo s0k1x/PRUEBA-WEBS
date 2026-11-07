@@ -256,19 +256,19 @@ html:not(.js) .rv { opacity: 1; transform: none; }
           <div class="panel term" role="tabpanel" id="p1" aria-labelledby="t1">
             <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Claude Code · kit completo</div>
             <div class="term__body">
-              <div class="ln"><code>/plugin marketplace add s0k1x/prueba-webs</code><button class="copy" type="button">Copiar</button></div>
+              <div class="ln"><code>/plugin marketplace add s0k1x/s0k1x-skill</code><button class="copy" type="button">Copiar</button></div>
               <div class="ln"><code>/plugin install s0k1x-skill@s0k1x-skill</code><button class="copy" type="button">Copiar</button></div>
               <div class="note">En un paso, con Claude Code 2.1.275 o posterior</div>
-              <div class="ln"><code>/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs</code><button class="copy" type="button">Copiar</button></div>
+              <div class="ln"><code>/plugin install s0k1x-skill --marketplace s0k1x/s0k1x-skill</code><button class="copy" type="button">Copiar</button></div>
               <div class="note ok">✓ 35 skills, 3 subagentes y 3 mods</div>
             </div>
           </div>
           <div class="panel term" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
             <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Codex · todas las skills</div>
             <div class="term__body">
-              <div class="ln"><code>npx skills add s0k1x/prueba-webs -a codex -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a codex -s '*'</code><button class="copy" type="button">Copiar</button></div>
               <div class="note">Para todos tus proyectos</div>
-              <div class="ln"><code>npx skills add s0k1x/prueba-webs -a codex -g -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a codex -g -s '*'</code><button class="copy" type="button">Copiar</button></div>
               <div class="note ok">✓ Se invocan con $nombre, por ejemplo $s0k1x-pulido</div>
             </div>
           </div>
@@ -278,7 +278,7 @@ html:not(.js) .rv { opacity: 1; transform: none; }
               <div class="note">Claude Code, después de añadir el marketplace</div>
               <div class="ln"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button class="copy" type="button">Copiar</button></div>
               <div class="note">Codex</div>
-              <div class="ln"><code>npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes</code><button class="copy" type="button">Copiar</button></div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a codex -s s0k1x-componentes</code><button class="copy" type="button">Copiar</button></div>
               <div class="note">s0k1x-flota, -retomar, -tokens-panel y -tokens-coach necesitan también s0k1x-tokens</div>
             </div>
           </div>
@@ -356,9 +356,9 @@ html:not(.js) .rv { opacity: 1; transform: none; }
   <div class="wrap">
     <span>© 2026 s0k1x</span>
     <nav aria-label="Pie">
-      <a href="https://github.com/s0k1x/prueba-webs">GitHub</a>
-      <a href="https://github.com/s0k1x/prueba-webs/blob/main/LICENSE">Licencia</a>
-      <a href="https://github.com/s0k1x/prueba-webs/blob/main/AVISOS.md">Avisos y créditos</a>
+      <a href="https://github.com/s0k1x/s0k1x-skill">GitHub</a>
+      <a href="https://github.com/s0k1x/s0k1x-skill/blob/main/LICENSE">Licencia</a>
+      <a href="https://github.com/s0k1x/s0k1x-skill/blob/main/AVISOS.md">Avisos y créditos</a>
     </nav>
   </div>
 </footer>
@@ -436,8 +436,8 @@ html:not(.js) .rv { opacity: 1; transform: none; }
   // demo del hero: se escribe sola
   var demo = document.getElementById('demo'), title = document.getElementById('demo-title');
   var scenes = [
-    { t: 'Claude Code', lines: ['/plugin marketplace add s0k1x/prueba-webs', '/plugin install s0k1x-skill@s0k1x-skill'], out: '✓ Instalado s0k1x-skill · 35 skills' },
-    { t: 'Codex', lines: ["npx skills add s0k1x/prueba-webs -a codex -s '*'"], out: '✓ Installed 35 skills' }
+    { t: 'Claude Code', lines: ['/plugin marketplace add s0k1x/s0k1x-skill', '/plugin install s0k1x-skill@s0k1x-skill'], out: '✓ Instalado s0k1x-skill · 35 skills' },
+    { t: 'Codex', lines: ["npx skills add s0k1x/s0k1x-skill -a codex -s '*'"], out: '✓ Installed 35 skills' }
   ];
   function render(scene, typed, cur, showOut) {
     var h = '';
