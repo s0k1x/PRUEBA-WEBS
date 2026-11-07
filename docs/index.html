@@ -105,9 +105,10 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
 #preguntas { margin-top: var(--s-8, 80px); }
 .tab-panels { min-height: 112px; margin-top: var(--s-4); display: grid; gap: var(--s-3); }
 .tab-panels > [role="tabpanel"] { display: grid; gap: var(--s-3); justify-items: start; }
-@media (max-width: 1279px) { #skills .frame { --p-h: 460px; } #flujo .frame { --p-h: 420px; } }
+@media (max-width: 1279px) { #instalar .frame { --p-h: 380px; } #skills .frame { --p-h: 460px; } #flujo .frame { --p-h: 420px; } }
+@media (min-width: 640px) and (max-width: 1023px) { #skills > .wrap { display: flex; flex-direction: column; } #preguntas { margin-top: auto; } }
 @media (max-width: 639px) {
-  #instalar .frame { --p-h: 300px; } #skills .frame, #flujo .frame { --p-h: 320px; }
+  #instalar .frame { --p-h: 260px; } #skills .frame, #flujo .frame { --p-h: 320px; }
   #preguntas { margin-top: 0; }
   .t-long, .inst__opt, .tab-panels p, .pc-chat__more { display: none; }
   .tab-panels { min-height: 0; }
@@ -147,7 +148,7 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
         </div>
       </div>
       <div class="nav__item"><a class="nav__link" href="#skills">Skills</a></div>
-      <div class="nav__item"><a class="nav__link" href="#flujo">Cómo funciona</a></div>
+      <div class="nav__item"><a class="nav__link" href="#flujo">Web nueva</a></div>
       <div class="nav__item"><a class="nav__link" href="#preguntas">Preguntas</a></div>
     </nav>
     <div class="nav__actions">
@@ -217,8 +218,8 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
             <p class="muted">Dos comandos para el kit completo. Las skills son las mismas en las dos herramientas.</p>
           </div>
           <div class="tabs" role="tablist" aria-label="Herramienta">
-            <button class="tab" type="button" role="tab" id="t-claude" aria-selected="true" aria-controls="p-claude s-claude"><img class="ic ic-16 ic-land" src="assets/icons/claude-code.svg" alt="" width="16" height="10"><span class="t-long">Instalar en </span>Claude Code</button>
-            <button class="tab" type="button" role="tab" id="t-codex" aria-selected="false" aria-controls="p-codex s-codex"><img class="ic ic-16 ic-ink" src="assets/icons/openai.svg" alt="" width="16" height="16"><span class="t-long">Instalar en </span>Codex</button>
+            <button class="tab" type="button" role="tab" id="t-claude" aria-selected="true" aria-controls="p-claude s-claude"><img class="ic ic-16 ic-land" src="assets/icons/claude-code.svg" alt="" width="16" height="10" loading="lazy"><span class="t-long">Instalar en </span>Claude Code</button>
+            <button class="tab" type="button" role="tab" id="t-codex" aria-selected="false" aria-controls="p-codex s-codex"><img class="ic ic-16 ic-ink" src="assets/icons/openai.svg" alt="" width="16" height="16" loading="lazy"><span class="t-long">Instalar en </span>Codex</button>
             <button class="tab" type="button" role="tab" id="t-una" aria-selected="false" aria-controls="p-una s-una"><span class="t-long">Instalar </span>una skill</button>
           </div>
           <div class="tab-panels">
@@ -256,6 +257,7 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
             <h2 id="skills-h">Las 35 skills del kit</h2>
             <p class="muted">Cada una funciona sola. Juntas, s0k1x-skill decide cuál usar y cuál manda si dos no están de acuerdo.</p>
           </div>
+          <a class="link" href="#instalar">Instalar una sola skill</a>
         </div>
         <div class="frame frame--split span-6 start-7">
           <div class="stage stage--fade-b">
@@ -311,7 +313,7 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
           <p class="footer__lede">Skills de diseño web, textos, tokens e ingeniería para Claude Code y Codex.</p>
         </div>
         <div class="span-2 footer__col"><h4>Instalar</h4><ul><li><a href="#instalar">Claude Code</a></li><li><a href="#instalar">Codex</a></li></ul></div>
-        <div class="span-2 footer__col"><h4>Kit</h4><ul><li><a href="#skills">Skills</a></li><li><a href="#flujo">Cómo funciona</a></li></ul></div>
+        <div class="span-2 footer__col"><h4>Kit</h4><ul><li><a href="#skills">Skills</a></li><li><a href="#flujo">Web nueva</a></li></ul></div>
         <div class="span-2 footer__col"><h4>Ayuda</h4><ul><li><a href="#preguntas">Preguntas</a></li></ul></div>
         <div class="span-2 footer__col"><h4>Código</h4><ul><li><a href="https://github.com/s0k1x/prueba-webs">GitHub</a></li><li><a href="https://github.com/s0k1x/prueba-webs/blob/main/LICENSE">Licencia</a></li></ul></div>
       </div>
