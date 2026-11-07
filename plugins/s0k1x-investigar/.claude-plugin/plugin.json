@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-investigar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses.",
   "author": {
     "name": "s0k1x"

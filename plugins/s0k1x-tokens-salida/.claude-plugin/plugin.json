@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-tokens-salida",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Explicitly filter private captured command output using s0k1x-tokens. Works on its own or as the manual fallback to automatic mode. No provider accounting.",
   "author": {
     "name": "s0k1x"

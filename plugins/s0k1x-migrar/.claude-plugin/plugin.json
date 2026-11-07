@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-migrar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof.",
   "author": {
     "name": "s0k1x"

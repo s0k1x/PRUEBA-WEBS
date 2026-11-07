@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-breve-descubrir",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. Use for \"discover workflows\" or breaking LLM spend down by workflow.",
   "author": {
     "name": "s0k1x"

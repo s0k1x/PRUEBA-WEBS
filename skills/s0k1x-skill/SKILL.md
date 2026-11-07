@@ -5,17 +5,17 @@ description: Coordinador de s0k1x-skill, en Claude Code o en Codex. Úsala al em
 
 # s0k1x-skill
 
-Este kit junta 34 skills (más esta), 3 subagentes y 3 mods, y funciona en **Claude Code** y en **Codex**. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
+Este kit junta 34 skills (más esta), 3 subagentes y 3 mods, y funciona en **Claude Code**, **Codex**, **Gemini CLI**, **Grok** y otros agentes que admiten skills. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
 
 Esta skill es para cuando el kit está instalado **completo**. Si solo hay algunas skills sueltas, cada una se usa por su cuenta y esta coordinación no hace falta. Antes de encadenar, mira qué skills están disponibles: si falta alguna del flujo, sáltala y sigue con las demás, sin inventar lo que haría.
 
 ## Claude Code y Codex
 
-| | Claude Code | Codex |
+| | Claude Code | Codex, Gemini CLI, Grok y otros agentes |
 |---|---|---|
-| Invocar una skill | Se carga sola por su descripción, o con `/s0k1x-skill:<nombre>` (kit completo) o `/<plugin>:<nombre>` (skill suelta) | Se carga sola por su descripción, o con `$<nombre>` |
-| Dónde están | En la caché de plugins de Claude Code | En `.agents/skills/` del proyecto o en `~/.agents/skills/` |
-| Instrucciones del proyecto | `CLAUDE.md` | `AGENTS.md` |
+| Invocar una skill | Se carga sola por su descripción, o con `/s0k1x-skill:<nombre>` (kit completo) o `/<plugin>:<nombre>` (skill suelta) | Se carga sola por su descripción; en Codex también con `$<nombre>`, y en los demás como indique cada agente |
+| Dónde están | En la caché de plugins de Claude Code | En `.agents/skills/` (Codex, Gemini, Cursor, Copilot…) o `.grok/skills/` (Grok), del proyecto o de tu carpeta personal |
+| Instrucciones del proyecto | `CLAUDE.md` | `AGENTS.md` (o el archivo de instrucciones de cada agente, como `GEMINI.md`) |
 | Subagentes `s0k1x-equipo-*` | Sí, vienen con el kit y con `s0k1x-equipo` | No existen: haz ese trabajo en el hilo principal con el mismo formato de salida que describe `s0k1x-equipo` |
 | Mods (Portero, Vigilante, `/consumo`) | Sí, con el kit completo | No |
 | Memoria del repo | `.claude/s0k1x-memoria.md` | El mismo archivo, así las dos herramientas comparten lo aprendido |

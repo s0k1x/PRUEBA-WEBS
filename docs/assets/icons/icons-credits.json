@@ -12,6 +12,42 @@
     "markUrl": "https://claude.com/product/claude-code"
   },
   {
+    "file": "cursor.svg",
+    "icon": "logos:cursor-icon",
+    "name": "Cursor",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://cursor.com/"
+  },
+  {
+    "file": "gemini.svg",
+    "icon": "logos:google-gemini-icon",
+    "name": "Gemini",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://deepmind.google/technologies/gemini/"
+  },
+  {
+    "file": "github-copilot.svg",
+    "icon": "logos:github-copilot",
+    "name": "GitHub Copilot",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://copilot.github.com/"
+  },
+  {
     "file": "github.svg",
     "icon": "logos:github-icon",
     "name": "GitHub",
@@ -22,6 +58,18 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://github.com/"
+  },
+  {
+    "file": "grok.svg",
+    "icon": "logos:grok-icon",
+    "name": "Grok",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://grok.com/"
   },
   {
     "file": "openai.svg",

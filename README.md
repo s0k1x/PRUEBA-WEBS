@@ -1,6 +1,6 @@
 # s0k1x-skill
 
-Un kit de 35 skills para **Claude Code** y **Codex**, con 3 subagentes y 3 mods para Claude Code. Puedes instalarlo entero, y entonces la skill `s0k1x-skill` coordina todas las demás, o instalar cada skill por separado. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
+Un kit de 35 skills para **Claude Code**, **Codex**, **Gemini CLI**, **Grok** y más de 70 agentes compatibles con `npx skills`, con 3 subagentes y 3 mods para Claude Code. Puedes instalarlo entero, y entonces la skill `s0k1x-skill` coordina todas las demás, o instalar cada skill por separado. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
 
 ## Qué incluye
 
@@ -74,6 +74,19 @@ Para que Codex use siempre el kit coordinado, puedes añadir esta línea al `AGE
 ```
 Para cualquier tarea, usa la skill s0k1x-skill para elegir y encadenar las skills del kit.
 ```
+
+## Instalación en Gemini, Grok y otros agentes
+
+Igual que en Codex, cambiando el agente tras `-a`:
+
+```
+npx skills add s0k1x/s0k1x-skill -a gemini-cli -s '*'      # Gemini CLI (.agents/skills)
+npx skills add s0k1x/s0k1x-skill -a grok -s '*'            # Grok (.grok/skills)
+npx skills add s0k1x/s0k1x-skill -a cursor -s '*'          # Cursor
+npx skills add s0k1x/s0k1x-skill -a github-copilot -s '*'  # GitHub Copilot
+```
+
+Añade `-g` para tenerlas en todos tus proyectos. El instalador admite más de 70 agentes.
 
 ## Descarga
 

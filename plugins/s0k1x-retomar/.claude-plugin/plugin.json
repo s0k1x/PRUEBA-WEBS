@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-retomar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Pulls a prior session's checkpoint as fenced, scrubbed recovery context. Use when the user is continuing prior work; skip it on a fresh, unrelated task.",
   "author": {
     "name": "s0k1x"

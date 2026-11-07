@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-movimiento",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Motion and interaction design expert based on Emil Kowalski, Jakub Krehel, and Jhey Tompkins' techniques. Two modes — build interactive components with purposeful motion, or audit existing animations to catch AI-slop motion patterns (audit emits a branded HTML report with looping demos).",
   "author": {
     "name": "s0k1x"
