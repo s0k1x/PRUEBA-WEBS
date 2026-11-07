@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>s0k1x-skill · 35 skills para Claude Code y Codex</title>
-<meta name="description" content="Un kit de 35 skills para Claude Code y Codex, con una skill que las coordina. Instálalas todas juntas o una por una.">
+<title>s0k1x-skill · 35 skills para Claude Code, Codex, Gemini y Grok</title>
+<meta name="description" content="Un kit de 35 skills para Claude Code, Codex, Gemini, Grok y más, con una skill que las coordina. Instálalas todas juntas o una por una.">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +93,10 @@ h2 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; }
 .hero h1 { font-size: clamp(40px, 7vw, 68px); line-height: 1; margin-top: 24px; }
 .hero h1 em { font-style: normal; color: var(--muted); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.works { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 36px; color: var(--dim); font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.works img { height: 20px; width: auto; opacity: .75; filter: grayscale(.2); transition: opacity .25s, transform .25s var(--ease); }
+.works img.ink-icon { filter: invert(1); }
+.works img:hover { opacity: 1; transform: translateY(-2px); }
 
 /* terminal */
 .term { background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r); overflow: hidden;
@@ -116,12 +120,12 @@ h2 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; }
 .copy.is-done { color: var(--ok); border-color: rgb(74 222 128 / .4); }
 
 /* pestañas */
-.tabs { position: relative; display: inline-flex; padding: 4px; border: 1px solid var(--line-2); border-radius: 99px; background: var(--surface); margin-bottom: 20px; max-width: 100%; }
+.tabs { position: relative; display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 4px; border: 1px solid var(--line-2); border-radius: 24px; background: var(--surface); margin-bottom: 20px; max-width: 100%; }
 .tab { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; color: var(--muted); font: 500 14px/1 var(--sans); padding: 10px 16px; border-radius: 99px; cursor: pointer; transition: color .25s; white-space: nowrap; }
 .tab img { height: 14px; width: auto; }
 .tab[aria-selected="true"] { color: #fff; }
 .tab[aria-selected="true"] .ink-icon { filter: invert(1) brightness(2); }
-.tabs__ind { position: absolute; top: 4px; bottom: 4px; left: 0; border-radius: 99px; background: var(--accent); box-shadow: 0 6px 20px -6px rgb(255 68 51 / .7); transition: transform .35s var(--ease), width .35s var(--ease); }
+.tabs__ind { position: absolute; top: 0; left: 0; border-radius: 99px; background: var(--accent); box-shadow: 0 6px 20px -6px rgb(255 68 51 / .7); transition: transform .35s var(--ease), width .35s var(--ease), height .35s var(--ease); }
 .tab .short { display: none; }
 @media (max-width: 420px) { .tab { padding: 10px 12px; font-size: 13px; } .tab .long { display: none; } .tab .short { display: inline; } }
 .panels { display: grid; }
@@ -223,12 +227,20 @@ html:not(.js) .rv { opacity: 1; transform: none; }
     <div class="glow" aria-hidden="true"></div>
     <div class="wrap">
       <div>
-        <span class="badge rv"><b>v1.1.0</b> · 35 skills · Claude Code y Codex</span>
-        <h1 id="hero-h" class="rv" style="--d:.08s">35 skills para Claude Code <em>y Codex</em></h1>
+        <span class="badge rv"><b>v1.2.0</b> · 35 skills · Claude Code, Codex, Gemini, Grok y más</span>
+        <h1 id="hero-h" class="rv" style="--d:.08s">35 skills para <em>tu agente de código</em></h1>
         <p class="lead rv" style="--d:.16s">Una skill coordinadora elige cuál usar en cada tarea y en qué orden. Instálalas todas juntas o solo las que necesites.</p>
         <div class="hero__cta rv" style="--d:.24s">
           <a class="btn btn--primary" href="#instalar">Instalar el kit <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--ghost" href="#skills">Ver las skills</a>
+        </div>
+        <div class="works rv" style="--d:.32s"><span>Funciona con</span>
+          <img src="assets/icons/claude-code.svg" alt="Claude Code" title="Claude Code" width="24" height="15">
+          <img class="ink-icon" src="assets/icons/openai.svg" alt="Codex" title="Codex" width="20" height="20">
+          <img src="assets/icons/gemini.svg" alt="Gemini" title="Gemini" width="20" height="20">
+          <img class="ink-icon" src="assets/icons/grok.svg" alt="Grok" title="Grok" width="20" height="19">
+          <img class="ink-icon" src="assets/icons/cursor.svg" alt="Cursor" title="Cursor" width="18" height="20">
+          <img class="ink-icon" src="assets/icons/github-copilot.svg" alt="GitHub Copilot" title="GitHub Copilot" width="22" height="18">
         </div>
       </div>
       <div class="term rv" style="--d:.2s" role="img" aria-label="Terminal que instala el kit en Claude Code y luego en Codex">
@@ -242,14 +254,17 @@ html:not(.js) .rv { opacity: 1; transform: none; }
     <div class="wrap">
       <div class="head">
         <p class="eyebrow rv">Instalar</p>
-        <h2 id="instalar-h" class="rv" style="--d:.06s">Dos comandos y listo</h2>
-        <p class="lead rv" style="--d:.12s">Las skills son las mismas en las dos herramientas. Elige la tuya.</p>
+        <h2 id="instalar-h" class="rv" style="--d:.06s">Un comando en tu herramienta</h2>
+        <p class="lead rv" style="--d:.12s">Las skills son las mismas en todas. Elige la tuya.</p>
       </div>
       <div class="rv" style="--d:.18s">
         <div class="tabs" role="tablist" aria-label="Herramienta">
           <span class="tabs__ind" aria-hidden="true"></span>
           <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1"><img src="assets/icons/claude-code.svg" alt="" width="22" height="14">Claude Code</button>
           <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1"><img class="ink-icon" src="assets/icons/openai.svg" alt="" width="14" height="14">Codex</button>
+          <button class="tab" role="tab" id="t4" aria-selected="false" aria-controls="p4" tabindex="-1"><img src="assets/icons/gemini.svg" alt="" width="14" height="14">Gemini</button>
+          <button class="tab" role="tab" id="t5" aria-selected="false" aria-controls="p5" tabindex="-1"><img class="ink-icon" src="assets/icons/grok.svg" alt="" width="14" height="14">Grok</button>
+          <button class="tab" role="tab" id="t6" aria-selected="false" aria-controls="p6" tabindex="-1">Otros</button>
           <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="p3" tabindex="-1"><span class="long">Solo una skill</span><span class="short">Una skill</span></button>
         </div>
         <div class="panels">
@@ -272,6 +287,34 @@ html:not(.js) .rv { opacity: 1; transform: none; }
               <div class="note ok">✓ Se invocan con $nombre, por ejemplo $s0k1x-pulido</div>
             </div>
           </div>
+          <div class="panel term" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+            <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Gemini CLI · todas las skills</div>
+            <div class="term__body">
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a gemini-cli -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note">Para todos tus proyectos</div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a gemini-cli -g -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note ok">✓ Quedan en .agents/skills</div>
+            </div>
+          </div>
+          <div class="panel term" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+            <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Grok · todas las skills</div>
+            <div class="term__body">
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a grok -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note">Para todos tus proyectos</div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a grok -g -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note ok">✓ Quedan en .grok/skills</div>
+            </div>
+          </div>
+          <div class="panel term" role="tabpanel" id="p6" aria-labelledby="t6" hidden>
+            <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Otros agentes</div>
+            <div class="term__body">
+              <div class="note">Cursor</div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a cursor -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note">GitHub Copilot</div>
+              <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a github-copilot -s '*'</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note">Cambia el nombre tras -a por tu agente: opencode, windsurf, cline, goose… El instalador admite más de 70.</div>
+            </div>
+          </div>
           <div class="panel term" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
             <div class="term__bar"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>Una sola skill</div>
             <div class="term__body">
@@ -279,6 +322,7 @@ html:not(.js) .rv { opacity: 1; transform: none; }
               <div class="ln"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button class="copy" type="button">Copiar</button></div>
               <div class="note">Codex</div>
               <div class="ln"><code>npx skills add s0k1x/s0k1x-skill -a codex -s s0k1x-componentes</code><button class="copy" type="button">Copiar</button></div>
+              <div class="note">Gemini, Grok y los demás: lo mismo cambiando codex por tu agente</div>
               <div class="note">s0k1x-flota, -retomar, -tokens-panel y -tokens-coach necesitan también s0k1x-tokens</div>
             </div>
           </div>
@@ -334,8 +378,8 @@ html:not(.js) .rv { opacity: 1; transform: none; }
       </div>
       <div class="faq rv" style="--d:.1s">
         <details><summary>¿Instalo el kit o skills sueltas?</summary><p>Una de las dos. Si instalas ambas, la misma skill aparece repetida.</p></details>
-        <details><summary>¿Qué cambia en Codex?</summary><p>Las skills y los flujos son iguales. Los subagentes y los mods son solo de Claude Code.</p></details>
-        <details><summary>¿Qué necesito para usarlo?</summary><p>Claude Code o Codex. Algunas skills necesitan Python 3.</p></details>
+        <details><summary>¿Qué cambia fuera de Claude Code?</summary><p>En Codex, Gemini, Grok y los demás, las skills y los flujos son iguales. Los subagentes y los mods son solo de Claude Code.</p></details>
+        <details><summary>¿Qué necesito para usarlo?</summary><p>Un agente de código compatible con skills y Node para npx. Algunas skills necesitan Python 3.</p></details>
         <details><summary>¿Puedo modificar el código?</summary><p>No. Puedes instalarlo y usarlo tal cual. Las skills de otros autores conservan su licencia.</p></details>
         <details><summary>¿Envía datos fuera?</summary><p>Solo s0k1x-breve-comprimir y las skills de la nube externa, y piden permiso antes.</p></details>
       </div>
@@ -344,8 +388,8 @@ html:not(.js) .rv { opacity: 1; transform: none; }
 
   <section class="close" aria-labelledby="close-h">
     <div class="wrap">
-      <h2 id="close-h" class="rv">Instala el kit en dos comandos</h2>
-      <p class="lead rv" style="--d:.08s">Funciona en Claude Code y en Codex.</p>
+      <h2 id="close-h" class="rv">Instala el kit en un minuto</h2>
+      <p class="lead rv" style="--d:.08s">Funciona en Claude Code, Codex, Gemini, Grok y más.</p>
       <div class="hero__cta rv" style="--d:.16s"><a class="btn btn--primary" href="#instalar">Instalar el kit <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a></div>
       <p class="word" aria-hidden="true">s0k1x</p>
     </div>
@@ -385,7 +429,7 @@ html:not(.js) .rv { opacity: 1; transform: none; }
   var list = document.querySelector('[role="tablist"]');
   var tabs = [].slice.call(list.querySelectorAll('[role="tab"]'));
   var ind = list.querySelector('.tabs__ind');
-  function place(t) { ind.style.width = t.offsetWidth + 'px'; ind.style.transform = 'translateX(' + t.offsetLeft + 'px)'; }
+  function place(t) { ind.style.width = t.offsetWidth + 'px'; ind.style.height = t.offsetHeight + 'px'; ind.style.transform = 'translate(' + t.offsetLeft + 'px,' + t.offsetTop + 'px)'; }
   function select(t, focus) {
     tabs.forEach(function (x) {
       var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
@@ -437,7 +481,9 @@ html:not(.js) .rv { opacity: 1; transform: none; }
   var demo = document.getElementById('demo'), title = document.getElementById('demo-title');
   var scenes = [
     { t: 'Claude Code', lines: ['/plugin marketplace add s0k1x/s0k1x-skill', '/plugin install s0k1x-skill@s0k1x-skill'], out: '✓ Instalado s0k1x-skill · 35 skills' },
-    { t: 'Codex', lines: ["npx skills add s0k1x/s0k1x-skill -a codex -s '*'"], out: '✓ Installed 35 skills' }
+    { t: 'Codex', lines: ["npx skills add s0k1x/s0k1x-skill -a codex -s '*'"], out: '✓ Installed 35 skills' },
+    { t: 'Gemini CLI', lines: ["npx skills add s0k1x/s0k1x-skill -a gemini-cli -s '*'"], out: '✓ Installed 35 skills' },
+    { t: 'Grok', lines: ["npx skills add s0k1x/s0k1x-skill -a grok -s '*'"], out: '✓ Installed 35 skills' }
   ];
   function render(scene, typed, cur, showOut) {
     var h = '';

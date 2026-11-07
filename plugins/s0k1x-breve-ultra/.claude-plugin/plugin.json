@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-breve-ultra",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "s0k1x-breve at maximum compression: fragments, one word when one word is enough, each fact once. Invoke only with /s0k1x-breve-ultra or /s0k1x-breve ultra. Stays on until \"stop s0k1x-breve\" or \"normal mode\".",
   "author": {
     "name": "s0k1x"

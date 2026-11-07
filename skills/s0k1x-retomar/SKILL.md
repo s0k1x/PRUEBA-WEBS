@@ -37,7 +37,7 @@ PULL_PY=""
 if [ -n "$CLAUDE_PLUGIN_ROOT" ] && [ -f "$CLAUDE_PLUGIN_ROOT/skills/s0k1x-retomar/scripts/pull_checkpoint.py" ]; then
   PULL_PY="$CLAUDE_PLUGIN_ROOT/skills/s0k1x-retomar/scripts/pull_checkpoint.py"
 else
-  PULL_PY="$(find -L "$PWD/.agents/skills" "$PWD/.claude/skills" "$HOME/.agents/skills" "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -path '*s0k1x-retomar/scripts/pull_checkpoint.py' 2>/dev/null | head -1)"
+  PULL_PY="$(find -L "$PWD/.agents/skills" "$PWD/.claude/skills" "$PWD/.grok/skills" "$HOME/.agents/skills" "$HOME/.grok/skills" "$HOME/.claude/skills" "$HOME/.claude/plugins/cache" "$HOME/.codex/skills" "$HOME/.codex/plugins/cache" "$HOME/.config/opencode/plugins/cache" "$HOME/.config/opencode/plugins" -type f -path '*s0k1x-retomar/scripts/pull_checkpoint.py' 2>/dev/null | head -1)"
 fi
 if [ -z "$PULL_PY" ] || [ ! -f "$PULL_PY" ]; then echo "[Error] pull_checkpoint.py not found. Is Token Optimizer installed?"; exit 1; fi
 

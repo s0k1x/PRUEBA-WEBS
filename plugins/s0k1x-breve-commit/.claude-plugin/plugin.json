@@ -1,6 +1,6 @@
 {
   "name": "s0k1x-breve-commit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Write a Conventional Commits message compressed to intent only. Use for \"write a commit\", \"commit message\", /commit or /s0k1x-breve-commit.",
   "author": {
     "name": "s0k1x"
