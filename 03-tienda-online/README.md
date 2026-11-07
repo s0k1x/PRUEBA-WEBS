@@ -1,3 +1,0 @@
-# Tienda online
-
-Estado: pendiente

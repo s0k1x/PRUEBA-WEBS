@@ -1,3 +1,0 @@
-# Portafolio profesional
-
-Estado: pendiente
