@@ -1,0 +1,67 @@
+LICENCIA DE USO RESTRINGIDO DE s0k1x-skill
+Versión 1.0
+
+Copyright (c) 2026 s0k1x. Todos los derechos reservados.
+
+1. OBRA PROTEGIDA
+
+Esta licencia cubre la "Obra Propia": todos los archivos de este repositorio
+creados por s0k1x, en concreto skills/s0k1x-skill/, skills/s0k1x-componentes/,
+agents/, hooks/, types/, plugins/, tools/, .claude-plugin/, docs/, README.md,
+AVISOS.md y esta licencia, así como la
+selección, organización, nombres y coordinación del conjunto del kit.
+
+Los componentes de terceros incluidos en las demás carpetas de skills/ NO están
+cubiertos por esta licencia: se rigen por las licencias de sus autores, que se
+indican en AVISOS.md y que prevalecen sobre esta licencia en lo que respecta a
+esos componentes.
+
+2. LO QUE SE PERMITE
+
+Se concede a cada persona que obtenga una copia legítima un permiso limitado,
+personal, no exclusivo, intransferible y revocable para:
+
+  a) instalar el plugin s0k1x-skill, o cualquiera de sus plugins individuales,
+     en Claude Code desde el repositorio oficial
+     (https://github.com/s0k1x/prueba-webs) mediante los comandos de
+     instalación publicados, y
+  b) usarlo tal cual, sin cambios, en sus propios proyectos.
+
+3. LO QUE SE PROHÍBE
+
+Salvo autorización previa y por escrito de s0k1x, queda prohibido, respecto a
+la Obra Propia:
+
+  a) modificar, adaptar, traducir o alterar cualquier archivo, en todo o en
+     parte;
+  b) crear obras derivadas, incluidas versiones renombradas, reempaquetadas o
+     combinadas con otras skills o plugins;
+  c) copiar, redistribuir, publicar, sublicenciar, vender, alquilar o ceder la
+     Obra Propia, por cualquier medio, con o sin ánimo de lucro;
+  d) publicar o distribuir el kit, o una parte de él, como si fuera propio o
+     bajo otro nombre;
+  e) eliminar, ocultar o alterar avisos de autoría, de copyright o de licencia,
+     incluido AVISOS.md;
+  f) usar el nombre "s0k1x" o "s0k1x-skill" para identificar productos o
+     servicios que no sean de s0k1x.
+
+Las copias que hagan de forma automática Claude Code, git o GitHub únicamente
+para instalar y usar el plugin conforme al apartado 2 no se consideran
+redistribución.
+
+4. TERMINACIÓN
+
+Cualquier incumplimiento pone fin de forma automática e inmediata a los
+permisos de esta licencia. Al terminar, se debe dejar de usar la Obra Propia y
+eliminar todas las copias.
+
+5. SIN GARANTÍA
+
+LA OBRA SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA. EN NINGÚN CASO s0k1x SERÁ RESPONSABLE DE DAÑOS, PÉRDIDAS DE DATOS O
+CUALQUIER OTRA RESPONSABILIDAD DERIVADA DEL USO DE LA OBRA.
+
+6. CONTACTO
+
+Para solicitar permisos adicionales, contacta con s0k1x a través de
+https://github.com/s0k1x.

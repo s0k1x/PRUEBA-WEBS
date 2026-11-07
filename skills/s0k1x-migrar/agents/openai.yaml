@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-migrar"
+  short_description: "Plan reversible data-safe transitions"
+  default_prompt: "Use $s0k1x-migrar to implement this transition with compatibility and rollback proof."

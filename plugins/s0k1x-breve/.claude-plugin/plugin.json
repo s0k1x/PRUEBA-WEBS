@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-breve",
+  "version": "1.1.0",
+  "description": "Terse s0k1x-breve voice: answer first, fluff gone, every technical fact kept. Use for /s0k1x-breve, \"s0k1x-breve mode\", \"talk like s0k1x-breve\", \"be brief\", \"less tokens\". Stays on until \"stop s0k1x-breve\" or \"normal mode\".",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

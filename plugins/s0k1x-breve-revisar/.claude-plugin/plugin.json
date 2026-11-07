@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-breve-revisar",
+  "version": "1.1.0",
+  "description": "Compressed code review - one line per finding with location, problem and fix. Use for /s0k1x-breve-revisar, \"review this PR\", or \"review the diff\".",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

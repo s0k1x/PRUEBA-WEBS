@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-tokens",
+  "version": "1.1.0",
+  "description": "Audits a Claude Code or Codex setup for context-window waste, fixes it with the user's approval, and measures the saving. Use when context feels tight, sessions degrade, or costs climb.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-construir"
+  short_description: "Build smallest coherent feature slice"
+  default_prompt: "Use $s0k1x-construir to implement this feature without speculative scope."

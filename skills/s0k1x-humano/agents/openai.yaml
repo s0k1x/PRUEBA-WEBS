@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-humano"
+  short_description: "Make AI-written text sound like the writer"
+  default_prompt: "Use $s0k1x-humano to rewrite this text in my voice without changing its facts."

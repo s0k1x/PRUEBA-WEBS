@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-tokens-coach",
+  "version": "1.1.0",
+  "description": "Coaches a token-efficient Claude Code or Codex setup from the user's own usage data. Use when planning a build, fixing a slow or costly setup, or deciding which workflow steps need a model.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

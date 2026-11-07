@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-breve-optimizar",
+  "version": "1.1.0",
+  "description": "Turn a Caveman optimization observation into an operator-chosen candidate with a paired baseline evaluation. Use when asked to inspect or evaluate a Caveman optimization report. Needs explicit approval.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

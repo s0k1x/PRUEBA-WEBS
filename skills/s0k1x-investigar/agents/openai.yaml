@@ -1,0 +1,4 @@
+interface:
+  display_name: "s0k1x-investigar"
+  short_description: "Find credible cause before editing code"
+  default_prompt: "Use $s0k1x-investigar to diagnose this failure before proposing edits."

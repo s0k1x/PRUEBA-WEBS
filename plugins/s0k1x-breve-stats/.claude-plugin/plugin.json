@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-breve-stats",
+  "version": "1.1.0",
+  "description": "Show recorded output and cache-read token usage and mode attribution for the current Claude Code session, or locate the host's native usage report. Trigger: /s0k1x-breve-stats.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

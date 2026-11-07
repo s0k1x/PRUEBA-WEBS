@@ -1,0 +1,184 @@
+{
+  "name": "s0k1x-skill",
+  "owner": {
+    "name": "s0k1x"
+  },
+  "plugins": [
+    {
+      "name": "s0k1x-skill",
+      "source": "./",
+      "description": "Kit unificado de skills de diseno, escritura, tokens e ingenieria, coordinado por la skill s0k1x-skill."
+    },
+    {
+      "name": "s0k1x-breve",
+      "source": "./plugins/s0k1x-breve",
+      "description": "Terse s0k1x-breve voice: answer first, fluff gone, every technical fact kept. Use for /s0k1x-breve, \"s0k1x-breve mode\", \"talk like s0k1x-breve\", \"be brief\", \"less tokens\". Stays on until \"stop s0k1x-breve\" or \"normal mode\"."
+    },
+    {
+      "name": "s0k1x-breve-aprender",
+      "source": "./plugins/s0k1x-breve-aprender",
+      "description": "Act on a Caveman learn report - review the ranked token sinks, apply cost-lowering fixes with per-edit consent, and report what those fixes returned. Use when asked to lower an agent's token cost, what caveman has saved, to trim a heavy CLAUDE.md, or to offload re-pasted context into cavemem."
+    },
+    {
+      "name": "s0k1x-breve-ayuda",
+      "source": "./plugins/s0k1x-breve-ayuda",
+      "description": "Quick-reference card for the three s0k1x-breve skills and their commands. Trigger: /s0k1x-breve-ayuda or \"s0k1x-breve help\"."
+    },
+    {
+      "name": "s0k1x-breve-commit",
+      "source": "./plugins/s0k1x-breve-commit",
+      "description": "Write a Conventional Commits message compressed to intent only. Use for \"write a commit\", \"commit message\", /commit or /s0k1x-breve-commit."
+    },
+    {
+      "name": "s0k1x-breve-comprimir",
+      "source": "./plugins/s0k1x-breve-comprimir",
+      "description": "Compress a memory file such as CLAUDE.md or a todo list into s0k1x-breve format to save input tokens, keeping a readable backup. Sends the file's text to the configured model provider. Trigger: /s0k1x-breve-comprimir."
+    },
+    {
+      "name": "s0k1x-breve-configurar",
+      "source": "./plugins/s0k1x-breve-configurar",
+      "description": "Wire a repository through the Caveman Cloud gateway so every LLM request is measured, with no behavior change. Use for \"set up caveman\" or adding LLM spend observability."
+    },
+    {
+      "name": "s0k1x-breve-descubrir",
+      "source": "./plugins/s0k1x-breve-descubrir",
+      "description": "Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. Use for \"discover workflows\" or breaking LLM spend down by workflow."
+    },
+    {
+      "name": "s0k1x-breve-evidencias",
+      "source": "./plugins/s0k1x-breve-evidencias",
+      "description": "Read-only review of Caveman Cloud evidence: cost, Cave Score, workflows, traces, latency, errors, routing, savings. Use when asked what Caveman found or where LLM spend goes."
+    },
+    {
+      "name": "s0k1x-breve-explorar",
+      "source": "./plugins/s0k1x-breve-explorar",
+      "description": "Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed. Skip it when the exact file or symbol is already named. Returns path:line citations only; its reads stay out of main context."
+    },
+    {
+      "name": "s0k1x-breve-gestionar",
+      "source": "./plugins/s0k1x-breve-gestionar",
+      "description": "Inspect Caveman Cloud's experiment lifecycle and block unsafe execution. Use when asked to start, approve, cancel, promote or roll back a Caveman experiment."
+    },
+    {
+      "name": "s0k1x-breve-mega",
+      "source": "./plugins/s0k1x-breve-mega",
+      "description": "s0k1x-breve in Classical Chinese: 文言文 register, far fewer characters, technical terms verbatim. Invoke only with /s0k1x-breve-mega or /s0k1x-breve wenyan. Stays on until \"stop s0k1x-breve\" or \"normal mode\"."
+    },
+    {
+      "name": "s0k1x-breve-optimizar",
+      "source": "./plugins/s0k1x-breve-optimizar",
+      "description": "Turn a Caveman optimization observation into an operator-chosen candidate with a paired baseline evaluation. Use when asked to inspect or evaluate a Caveman optimization report. Needs explicit approval."
+    },
+    {
+      "name": "s0k1x-breve-revisar",
+      "source": "./plugins/s0k1x-breve-revisar",
+      "description": "Compressed code review - one line per finding with location, problem and fix. Use for /s0k1x-breve-revisar, \"review this PR\", or \"review the diff\"."
+    },
+    {
+      "name": "s0k1x-breve-stats",
+      "source": "./plugins/s0k1x-breve-stats",
+      "description": "Show recorded output and cache-read token usage and mode attribution for the current Claude Code session, or locate the host's native usage report. Trigger: /s0k1x-breve-stats."
+    },
+    {
+      "name": "s0k1x-breve-ultra",
+      "source": "./plugins/s0k1x-breve-ultra",
+      "description": "s0k1x-breve at maximum compression: fragments, one word when one word is enough, each fact once. Invoke only with /s0k1x-breve-ultra or /s0k1x-breve ultra. Stays on until \"stop s0k1x-breve\" or \"normal mode\"."
+    },
+    {
+      "name": "s0k1x-componentes",
+      "source": "./plugins/s0k1x-componentes",
+      "description": "Construye componentes y recursos web bonitos y con oficio, que no parezcan genéricos ni \"hechos por IA\": botones, tarjetas, inputs, navegación, heros, precios, testimonios, galerías, fondos, iconos y texturas."
+    },
+    {
+      "name": "s0k1x-construir",
+      "source": "./plugins/s0k1x-construir",
+      "description": "Build feature work with high overbuilding risk. Use for new behavior, product slices, or integrations where repository reuse, strict scope, and an explicit stop condition matter."
+    },
+    {
+      "name": "s0k1x-equipo",
+      "source": "./plugins/s0k1x-equipo",
+      "description": "When to delegate to `s0k1x-equipo-investigador` (locate code), `s0k1x-equipo-constructor` (1-2 file edit) or `s0k1x-equipo-revisor` (diff review) instead of working inline or using `Explore`. Their output is compressed, so main context lasts longer."
+    },
+    {
+      "name": "s0k1x-estilo",
+      "source": "./plugins/s0k1x-estilo",
+      "description": "s0k1x-estilo 2.5.0, the anti-slop frontend skill."
+    },
+    {
+      "name": "s0k1x-flota",
+      "source": "./plugins/s0k1x-flota",
+      "description": "Audits token waste and cost across Claude Code, Codex, OpenClaw, Hermes and OpenCode, with dollar savings. Use when running several agent systems or suspecting idle heartbeats burn tokens."
+    },
+    {
+      "name": "s0k1x-humano",
+      "source": "./plugins/s0k1x-humano",
+      "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says. Use when editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line closers, staged openers, forced triads, dashes everywhere, inflated claims, sales language, stock AI words, bold labels, or filler."
+    },
+    {
+      "name": "s0k1x-investigar",
+      "source": "./plugins/s0k1x-investigar",
+      "description": "Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses."
+    },
+    {
+      "name": "s0k1x-memoria",
+      "source": "./plugins/s0k1x-memoria",
+      "description": "Maintain a per-repo s0k1x-memoria as a continuously curated runbook (not a session log). Activates EVERY session. Read and curate it before work, keep only recurring high-value guidance, organize by priority-sorted categories, and cap each category at top 10 items."
+    },
+    {
+      "name": "s0k1x-migrar",
+      "source": "./plugins/s0k1x-migrar",
+      "description": "Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof."
+    },
+    {
+      "name": "s0k1x-movimiento",
+      "source": "./plugins/s0k1x-movimiento",
+      "description": "Motion and interaction design expert based on Emil Kowalski, Jakub Krehel, and Jhey Tompkins' techniques. Two modes — build interactive components with purposeful motion, or audit existing animations to catch AI-slop motion patterns (audit emits a branded HTML report with looping demos)."
+    },
+    {
+      "name": "s0k1x-parche",
+      "source": "./plugins/s0k1x-parche",
+      "description": "Fix bugs and small behavior changes at the narrowest responsible layer. Use when regression proof, preserved surrounding behavior, and task-relevant tests matter."
+    },
+    {
+      "name": "s0k1x-pulido",
+      "source": "./plugins/s0k1x-pulido",
+      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend interface: websites, landing pages, dashboards, product UI, components, forms, settings, onboarding, empty states, and native iOS or Android screens."
+    },
+    {
+      "name": "s0k1x-refactor",
+      "source": "./plugins/s0k1x-refactor",
+      "description": "Restructure code while preserving behavior. Use for extraction, consolidation, ownership moves, or cleanup where verification must bracket structural edits."
+    },
+    {
+      "name": "s0k1x-retomar",
+      "source": "./plugins/s0k1x-retomar",
+      "description": "Pulls a prior session's checkpoint as fenced, scrubbed recovery context. Use when the user is continuing prior work; skip it on a fresh, unrelated task."
+    },
+    {
+      "name": "s0k1x-tokens",
+      "source": "./plugins/s0k1x-tokens",
+      "description": "Audits a Claude Code or Codex setup for context-window waste, fixes it with the user's approval, and measures the saving. Use when context feels tight, sessions degrade, or costs climb."
+    },
+    {
+      "name": "s0k1x-tokens-coach",
+      "source": "./plugins/s0k1x-tokens-coach",
+      "description": "Coaches a token-efficient Claude Code or Codex setup from the user's own usage data. Use when planning a build, fixing a slow or costly setup, or deciding which workflow steps need a model."
+    },
+    {
+      "name": "s0k1x-tokens-panel",
+      "source": "./plugins/s0k1x-tokens-panel",
+      "description": "Answers what a past session cost (\"the Garden session yesterday\", a session id) with a priced number, and opens the s0k1x-tokens dashboard when asked to see it."
+    },
+    {
+      "name": "s0k1x-tokens-salida",
+      "source": "./plugins/s0k1x-tokens-salida",
+      "description": "Explicitly filter private captured command output using s0k1x-tokens. Works on its own or as the manual fallback to automatic mode. No provider accounting."
+    },
+    {
+      "name": "s0k1x-verificar",
+      "source": "./plugins/s0k1x-verificar",
+      "description": "Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof."
+    }
+  ],
+  "description": "s0k1x-skill: kit unificado de skills de diseno web, escritura, tokens e ingenieria."
+}

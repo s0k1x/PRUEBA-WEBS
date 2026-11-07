@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>s0k1x-skill</title>
+<meta name="description" content="Un kit de skills para Claude Code: diseño web, textos naturales, ahorro de tokens e ingeniería, coordinado por una sola skill.">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --fg: #16161a;
+    --muted: #6b6b72;
+    --line: #e4e4e0;
+    --card: #ffffff;
+    --code-bg: #f1f1ee;
+    --accent: #3d5afe;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e10;
+      --fg: #ececef;
+      --muted: #9a9aa3;
+      --line: #26262b;
+      --card: #151518;
+      --code-bg: #1c1c20;
+      --accent: #8c9eff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 var(--sans);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 72px 20px 96px; }
+  header { margin-bottom: 64px; }
+  .brand { font: 600 14px var(--mono); color: var(--muted); letter-spacing: .02em; }
+  h1 { font-size: clamp(36px, 8vw, 56px); line-height: 1.05; letter-spacing: -.03em; margin: 12px 0 16px; }
+  .lead { font-size: 19px; color: var(--muted); margin: 0; max-width: 560px; }
+  section { margin-top: 56px; }
+  h2 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 16px; }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .cmd {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 12px 12px 16px; margin: 0 0 10px;
+  }
+  .cmd code { flex: 1; font: 14px var(--mono); overflow-x: auto; white-space: nowrap; }
+  .cmd button {
+    flex: none; font: 500 13px var(--sans); color: var(--fg); background: var(--card);
+    border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer;
+  }
+  .cmd button:hover { border-color: var(--muted); }
+  .note { font-size: 14px; color: var(--muted); }
+  code.inline { font: 14px var(--mono); background: var(--code-bg); padding: 1px 6px; border-radius: 5px; }
+  ol.flow { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  ol.flow li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); }
+  ol.flow li:last-child { border-bottom: 1px solid var(--line); }
+  ol.flow li::before { content: counter(s); font: 500 14px var(--mono); color: var(--muted); padding-top: 2px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card h3 { font-size: 15px; margin: 0 0 8px; }
+  .card ul { list-style: none; padding: 0; margin: 0; font: 13px/1.9 var(--mono); color: var(--muted); }
+  footer { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">s0k1x-skill · v1.1.0</div>
+    <h1>Un kit de skills.<br>Una sola skill al mando.</h1>
+    <p class="lead">35 skills para Claude Code y Codex que funcionan juntas o por separado: diseño web, componentes con oficio, textos naturales, animaciones, ahorro de tokens e ingeniería. Tú pides la tarea; <code class="inline">s0k1x-skill</code> decide qué usar y en qué orden.</p>
+  </header>
+
+  <section id="instalar">
+    <h2>Instalar en Claude Code</h2>
+    <p>En Claude Code, añade el repositorio y luego instala el plugin:</p>
+    <div class="cmd"><code>/plugin marketplace add s0k1x/prueba-webs</code><button type="button">Copiar</button></div>
+    <div class="cmd"><code>/plugin install s0k1x-skill@s0k1x-skill</code><button type="button">Copiar</button></div>
+    <p class="note">En Claude Code 2.1.275 o posterior también puedes hacerlo en un paso:</p>
+    <div class="cmd"><code>/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs</code><button type="button">Copiar</button></div>
+    <p style="margin-top:20px">¿Solo quieres una skill? Cada una se instala por separado, con lo que necesita para funcionar:</p>
+    <div class="cmd"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button type="button">Copiar</button></div>
+    <p class="note">Cambia <code class="inline">s0k1x-componentes</code> por cualquier skill de la lista. Instala el kit completo o skills sueltas, no las dos cosas, para no tener la misma skill repetida. La coordinadora y los mods vienen solo con el kit.</p>
+  </section>
+
+  <section id="codex">
+    <h2>Instalar en Codex</h2>
+    <p>Todas las skills, con la coordinadora:</p>
+    <div class="cmd"><code>npx skills add s0k1x/prueba-webs -a codex -s '*'</code><button type="button">Copiar</button></div>
+    <p>Solo una:</p>
+    <div class="cmd"><code>npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes</code><button type="button">Copiar</button></div>
+    <p class="note">Añade <code class="inline">-g</code> para tenerlas en todos tus proyectos. Si instalas sueltas <code class="inline">s0k1x-flota</code>, <code class="inline">s0k1x-retomar</code>, <code class="inline">s0k1x-tokens-panel</code> o <code class="inline">s0k1x-tokens-coach</code>, añade también <code class="inline">-s s0k1x-tokens</code>. En Codex una skill se invoca con <code class="inline">$nombre</code>; los subagentes y los mods son solo de Claude Code.</p>
+  </section>
+
+  <section id="descargar">
+    <h2>Descargar</h2>
+    <div class="cmd"><code>git clone https://github.com/s0k1x/prueba-webs.git</code><button type="button">Copiar</button></div>
+    <p>O descarga el <a href="https://github.com/s0k1x/prueba-webs/archive/refs/heads/main.zip">archivo ZIP</a>. Para probarlo sin instalarlo, desde la carpeta descargada:</p>
+    <div class="cmd"><code>claude --plugin-dir .</code><button type="button">Copiar</button></div>
+  </section>
+
+  <section id="como-funciona">
+    <h2>Cómo funciona</h2>
+    <p>Pide la tarea con normalidad, por ejemplo "hazme una web para una peluquería". Para una web nueva, el kit sigue este orden:</p>
+    <ol class="flow">
+      <li><span><strong>s0k1x-estilo</strong>: elige el estilo, las fotos y las referencias, y hace la primera versión.</span></li>
+      <li><span><strong>s0k1x-componentes</strong>: construye cada pieza con oficio: estados, luz, material y recursos propios.</span></li>
+      <li><span><strong>s0k1x-humano</strong>: reescribe los textos para que suenen naturales.</span></li>
+      <li><span><strong>s0k1x-movimiento</strong>: añade solo las animaciones con sentido.</span></li>
+      <li><span><strong>s0k1x-pulido</strong>: revisa jerarquía, accesibilidad y móvil.</span></li>
+      <li><span><strong>s0k1x-verificar</strong>: comprueba que cumple lo pedido y para.</span></li>
+    </ol>
+    <p class="note" style="margin-top:12px">Cada decisión tiene una sola skill responsable. La accesibilidad, la seguridad y lo que pidas tú ganan siempre.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Qué incluye</h2>
+    <div class="grid">
+      <div class="card"><h3>Diseño web</h3><ul><li>s0k1x-estilo</li><li>s0k1x-componentes</li><li>s0k1x-pulido</li><li>s0k1x-movimiento</li></ul></div>
+      <div class="card"><h3>Textos</h3><ul><li>s0k1x-humano</li></ul></div>
+      <div class="card"><h3>Ingeniería</h3><ul><li>s0k1x-investigar</li><li>s0k1x-parche</li><li>s0k1x-construir</li><li>s0k1x-refactor</li><li>s0k1x-migrar</li><li>s0k1x-verificar</li></ul></div>
+      <div class="card"><h3>Tokens y contexto</h3><ul><li>s0k1x-tokens</li><li>s0k1x-tokens-panel</li><li>s0k1x-tokens-coach</li><li>s0k1x-tokens-salida</li><li>s0k1x-flota</li><li>s0k1x-retomar</li></ul></div>
+      <div class="card"><h3>Respuestas breves</h3><ul><li>s0k1x-breve (+ ultra, mega)</li><li>s0k1x-breve-commit</li><li>s0k1x-breve-revisar</li><li>s0k1x-breve-explorar</li><li>s0k1x-breve-stats</li><li>s0k1x-equipo</li></ul></div>
+      <div class="card"><h3>Memoria</h3><ul><li>s0k1x-memoria</li></ul></div>
+    </div>
+    <p class="note" style="margin-top:16px">Además: 3 subagentes (<code class="inline">s0k1x-equipo-*</code>) y 3 mods: Portero (búsquedas sencillas al modelo barato), Vigilante (avisa si la caché se enfrió) y <code class="inline">/consumo</code> (panel de tokens por agente).</p>
+  </section>
+
+  <section id="permisos">
+    <h2>Antes de usarlo</h2>
+    <p>Algunas skills te piden permiso porque envían datos fuera o cambian tu configuración: las de la nube externa (<code class="inline">s0k1x-breve-configurar</code> y similares), <code class="inline">s0k1x-breve-comprimir</code> y los arreglos de <code class="inline">s0k1x-tokens</code>.</p>
+    <p class="note">Requisitos: Claude Code. Algunas skills usan Python 3, y <code class="inline">s0k1x-pulido</code> descarga su motor la primera vez.</p>
+  </section>
+
+  <section id="licencia">
+    <h2>Licencia</h2>
+    <p>Uso restringido: puedes instalarlo y usarlo tal cual. Copiar, modificar, redistribuir o publicar el kit como propio está prohibido sin permiso de s0k1x.</p>
+    <p class="note">Algunas skills incluidas son de otros autores y mantienen sus propias licencias. Consulta <a href="https://github.com/s0k1x/prueba-webs/blob/main/LICENSE">LICENSE</a> y <a href="https://github.com/s0k1x/prueba-webs/blob/main/AVISOS.md">AVISOS.md</a>.</p>
+  </section>
+
+  <footer>© 2026 s0k1x · <a href="https://github.com/s0k1x/prueba-webs">GitHub</a></footer>
+</main>
+<script>
+  document.querySelectorAll('.cmd button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.previousElementSibling.textContent;
+      var done = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1500); };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(done, function () { b.textContent = 'Selecciona y copia'; });
+      } else {
+        b.textContent = 'Selecciona y copia';
+      }
+    });
+  });
+</script>
+</body>
+</html>

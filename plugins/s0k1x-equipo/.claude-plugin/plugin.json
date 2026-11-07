@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-equipo",
+  "version": "1.1.0",
+  "description": "When to delegate to `s0k1x-equipo-investigador` (locate code), `s0k1x-equipo-constructor` (1-2 file edit) or `s0k1x-equipo-revisor` (diff review) instead of working inline or using `Explore`. Their output is compressed, so main context lasts longer.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

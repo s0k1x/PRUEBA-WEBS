@@ -1,0 +1,1 @@
+../../../agents/s0k1x-equipo-investigador.md
