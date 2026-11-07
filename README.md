@@ -1,21 +1,21 @@
-# kit-completo
+# s0k1x-skill
 
-Un único plugin de Claude Code que reúne 33 skills, 3 subagentes y 3 mods. La skill **`kit-maestro`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
+Un único plugin de Claude Code que reúne 33 skills, 3 subagentes y 3 mods. La skill **`s0k1x-skill`** decide cuál usar en cada momento, las encadena y resuelve los choques entre ellas. Cada skill sigue funcionando por separado.
 
 ## Qué incluye
 
 | Área | Skills |
 |---|---|
-| Diseño web | `design-taste-frontend` (Taste), `impeccable`, `design-motion-principles` (animaciones, Emil Kowalski) |
-| Escritura | `humanizer` |
-| Respuestas escuetas y ahorro | `caveman`, `ultracave`, `megacave`, `caveman-commit`, `caveman-review`, `caveman-explore`, `caveman-stats`, `caveman-compress`, `caveman-help`, `cavecrew` |
-| Caveman Cloud (opcional, servicio externo) | `caveman-setup`, `caveman-discover`, `caveman-evidence-review`, `caveman-manage`, `caveman-optimize`, `caveman-learn` |
-| Tokens y contexto | `token-optimizer`, `token-optimizer-output`, `token-coach`, `token-dashboard`, `fleet-auditor`, `resume-checkpoint` |
-| Ingeniería | `investigate-first`, `surgical-patch`, `lean-build`, `safe-refactor`, `migration`, `verify-and-stop` |
-| Memoria | `napkin` |
-| Coordinación | `kit-maestro` |
+| Diseño web | `s0k1x-estilo`, `s0k1x-pulido`, `s0k1x-movimiento` (animaciones) |
+| Escritura | `s0k1x-humano` |
+| Respuestas escuetas y ahorro | `s0k1x-breve`, `s0k1x-breve-ultra`, `s0k1x-breve-mega`, `s0k1x-breve-commit`, `s0k1x-breve-revisar`, `s0k1x-breve-explorar`, `s0k1x-breve-stats`, `s0k1x-breve-comprimir`, `s0k1x-breve-ayuda`, `s0k1x-equipo` |
+| Nube externa (opcional, servicio de terceros) | `s0k1x-breve-configurar`, `s0k1x-breve-descubrir`, `s0k1x-breve-evidencias`, `s0k1x-breve-gestionar`, `s0k1x-breve-optimizar`, `s0k1x-breve-aprender` |
+| Tokens y contexto | `s0k1x-tokens`, `s0k1x-tokens-salida`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar` |
+| Ingeniería | `s0k1x-investigar`, `s0k1x-parche`, `s0k1x-construir`, `s0k1x-refactor`, `s0k1x-migrar`, `s0k1x-verificar` |
+| Memoria | `s0k1x-memoria` |
+| Coordinación | `s0k1x-skill` |
 
-**Subagentes** (`agents/`): `cavecrew-investigator`, `cavecrew-builder` y `cavecrew-reviewer`, que usa la skill `cavecrew`.
+**Subagentes** (`agents/`): `s0k1x-equipo-investigador`, `s0k1x-equipo-constructor` y `s0k1x-equipo-revisor`, que usa la skill `s0k1x-equipo`.
 
 **Mods** (`hooks/register.tsx`):
 - **Portero**: manda a Haiku los subagentes de tareas fáciles.
@@ -30,28 +30,28 @@ En Claude Code:
 
 ```
 /plugin marketplace add s0k1x/prueba-webs
-/plugin install kit-completo@kit-completo
+/plugin install s0k1x-skill@s0k1x-skill
 ```
 
 O en un paso, en Claude Code 2.1.275 o posterior:
 
 ```
-/plugin install kit-completo --marketplace s0k1x/prueba-webs
+/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs
 ```
 
 Para probarlo sin instalarlo, desde una copia local del repo: `claude --plugin-dir .`
 
 ## Uso
 
-Pide la tarea con normalidad ("hazme una landing para una peluquería") y `kit-maestro` elige el flujo. También puedes nombrar una skill concreta, por ejemplo `/kit-completo:impeccable`.
+Pide la tarea con normalidad ("hazme una landing para una peluquería") y `s0k1x-skill` elige el flujo. También puedes nombrar una skill concreta, por ejemplo `/s0k1x-skill:s0k1x-pulido`.
 
-Algunas skills necesitan tu permiso explícito: Caveman Cloud y `caveman-compress` envían datos fuera, y los arreglos de `token-optimizer` cambian tu configuración.
+Algunas skills necesitan tu permiso explícito: las skills de la nube externa y `s0k1x-breve-comprimir` envían datos fuera, y los arreglos de `s0k1x-tokens` cambian tu configuración.
 
 ## Requisitos
 
 - Los mods necesitan una versión de Claude Code con soporte de mods (`hooks.json` con `modules`). Sin ella, las skills funcionan igual.
-- Algunas skills usan Python 3 (`token-optimizer`, `fleet-auditor`, `resume-checkpoint`) o descargan un binario la primera vez (`impeccable`).
+- Algunas skills usan Python 3 (`s0k1x-tokens`, `s0k1x-flota`, `s0k1x-retomar`) o descargan un binario la primera vez (`s0k1x-pulido`).
 
 ## Licencias
 
-Las skills son de sus autores y conservan sus licencias; consulta [THIRD_PARTY.md](THIRD_PARTY.md). `token-optimizer` usa PolyForm Noncommercial, que no permite el uso comercial.
+Las skills son de sus autores y conservan sus licencias; consulta [AVISOS.md](AVISOS.md). `s0k1x-tokens` usa PolyForm Noncommercial, que no permite el uso comercial.

@@ -3,11 +3,11 @@ MIT License (solo archivos propios)
 Copyright (c) 2026 s0k1x
 
 Esta licencia cubre unicamente los archivos propios de este repositorio:
-skills/kit-maestro/, agents/, hooks/, types/, .claude-plugin/,
-README.md y THIRD_PARTY.md.
+skills/s0k1x-skill/, agents/, hooks/, types/, .claude-plugin/,
+README.md y AVISOS.md.
 
 Las demas carpetas de skills/ son de terceros y se rigen por sus propias
-licencias, indicadas en THIRD_PARTY.md.
+licencias, indicadas en AVISOS.md.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of the files covered above (the "Software"), to deal in the Software without

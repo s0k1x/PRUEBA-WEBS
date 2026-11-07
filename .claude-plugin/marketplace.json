@@ -1,14 +1,14 @@
 {
-  "name": "kit-completo",
+  "name": "s0k1x-skill",
   "owner": {
     "name": "s0k1x"
   },
   "plugins": [
     {
-      "name": "kit-completo",
+      "name": "s0k1x-skill",
       "source": "./",
-      "description": "Kit unificado de skills de diseno, escritura, tokens e ingenieria con la skill kit-maestro como coordinadora."
+      "description": "Kit unificado de skills de diseno, escritura, tokens e ingenieria, coordinado por la skill s0k1x-skill."
     }
   ],
-  "description": "Kit unificado de skills de diseno web, escritura, tokens e ingenieria."
+  "description": "s0k1x-skill: kit unificado de skills de diseno web, escritura, tokens e ingenieria."
 }

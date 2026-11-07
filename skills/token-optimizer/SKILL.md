@@ -1,5 +1,5 @@
 ---
-name: token-optimizer
+name: s0k1x-tokens
 description: Audits a Claude Code or Codex setup for context-window waste, fixes it with the user's approval, and measures the saving. Use when context feels tight, sessions degrade, or costs climb.
 effort: high
 ---
@@ -8,7 +8,7 @@ effort: high
 
 Measures where a setup spends its context window, proposes fixes, applies the ones the user approves, and re-measures. The deliverable is a before-and-after the user can verify, with every change backed up. Typical recovery is 5-15% of the window from config cleanup, more when compaction and caching settings are wrong for the way the user works.
 
-Token Optimizer's own skills (`token-optimizer`, `token-coach`, `token-dashboard`, `fleet-auditor`, `resume-checkpoint`) are the measurement layer, so leave them out of every unused-skill, archive or consolidation suggestion, however rarely they run.
+Token Optimizer's own skills (`s0k1x-tokens`, `s0k1x-tokens-coach`, `s0k1x-tokens-panel`, `s0k1x-flota`, `s0k1x-retomar`) are the measurement layer, so leave them out of every unused-skill, archive or consolidation suggestion, however rarely they run.
 
 ## Step 0: pick the right workflow for this runtime
 
@@ -119,7 +119,7 @@ Work through these in order and tick each off; a skipped phase stays in the list
 
 - `"$PY" "$MEASURE_PY" recommendations`: the daily-measured usage recommendations (compact window, subagent cache lifetime), each with the user's own numbers and the exact command when the state is `recommend`. Relay those lines verbatim; Token Optimizer recommends, it never sets either key.
 - `"$PY" "$MEASURE_PY" subagent-cache status` / `compact-advice`: the single-measurement detail behind each item. Both are estimates from the user's own history; the user decides.
-- Repeated work a script could do instead of a model: hand over to `token-coach`, goal e.
+- Repeated work a script could do instead of a model: hand over to `s0k1x-tokens-coach`, goal e.
 
 **5. Verify.** The verification agent re-measures and computes the saving. Show before and after, then the habits that keep it. If a verification number is worse than the baseline, find which change caused it, restore that file from the backup, and return to step 4.
 

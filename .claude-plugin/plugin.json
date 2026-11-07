@@ -1,8 +1,10 @@
 {
-  "name": "kit-completo",
+  "name": "s0k1x-skill",
   "version": "1.0.0",
-  "description": "Kit unificado: diseno web (Taste, Impeccable, Motion), escritura natural (Humanizer), ahorro de tokens (Caveman, Token Optimizer), flujos de ingenieria, memoria por repo (Napkin) y 3 mods (Portero, Vigilante, Panel). La skill kit-maestro coordina todo.",
-  "author": { "name": "s0k1x" },
+  "description": "s0k1x-skill: kit unificado de skills para diseno web, escritura natural, ahorro de tokens, flujos de ingenieria y memoria por repo, con 3 mods (Portero, Vigilante y Panel). La skill s0k1x-skill coordina todas las demas.",
+  "author": {
+    "name": "s0k1x"
+  },
   "repository": "https://github.com/s0k1x/prueba-webs",
   "types": "./types/index.d.ts"
 }

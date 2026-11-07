@@ -11,17 +11,17 @@ const EASY = new Set([
   'statusline-setup',
   'web-fetch',
   'claude-code-guide',
-  'cavecrew-investigator',
+  's0k1x-equipo-investigador',
 ])
 
 // --- Vigilante: la cache del prompt caduca a los 5 min (1 h en algunos planes)
 const COLD_MS = 5 * 60 * 1000
 const MIN_TOKENS = 50_000
-const last = atom({ plugin: 'kit-completo', key: 'last' } as const, null)
+const last = atom({ plugin: 's0k1x-skill', key: 'last' } as const, null)
 
 // --- Panel de consumo ---------------------------------------------------
 const PANE = 'consumo'
-const rows = atom({ plugin: 'kit-completo', key: 'rows' } as const, [], {
+const rows = atom({ plugin: 's0k1x-skill', key: 'rows' } as const, [], {
   shape: 'rows-1',
 })
 
