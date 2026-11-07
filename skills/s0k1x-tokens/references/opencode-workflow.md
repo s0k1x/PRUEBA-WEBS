@@ -66,9 +66,9 @@ hooks into `~/.claude/settings.json` (via `measure.py setup-all-hooks`).
 - If you use **OpenCode only**: the Claude hooks are unnecessary. After
   running `install.sh`, remove them with:
   ```bash
-  "$PY" ~/.claude/token-optimizer/skills/s0k1x-tokens/scripts/measure.py cleanup-duplicate-hooks
+  "$PY" ~/.claude/token-optimizer/skills/token-optimizer/scripts/measure.py cleanup-duplicate-hooks
   ```
   Or simply re-create the symlink manually:
   ```bash
-  ln -sfn ~/.claude/token-optimizer/skills/s0k1x-tokens ~/.claude/skills/s0k1x-tokens
+  ln -sfn ~/.claude/token-optimizer/skills/token-optimizer ~/.claude/skills/token-optimizer
   ```

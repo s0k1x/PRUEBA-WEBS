@@ -43,7 +43,7 @@ _NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 # ---------------------------------------------------------------------------
 _SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(_SCRIPT_DIR))
-_TOKEN_OPTIMIZER_SCRIPT_DIR = _SCRIPT_DIR.parent.parent / "token-optimizer" / "scripts"
+_TOKEN_OPTIMIZER_SCRIPT_DIR = _SCRIPT_DIR.parent.parent / "s0k1x-tokens" / "scripts"
 if _TOKEN_OPTIMIZER_SCRIPT_DIR.exists():
     sys.path.insert(0, str(_TOKEN_OPTIMIZER_SCRIPT_DIR))
 from shared import (  # noqa: E402 — must follow sys.path.insert above
@@ -282,7 +282,7 @@ def _load_pricing() -> dict[str, dict[str, float]]:
     return pricing
 
 
-_BUNDLED_PRICES_PATH = Path(__file__).resolve().parent.parent.parent / "token-optimizer" / "pricing" / "prices.json"
+_BUNDLED_PRICES_PATH = Path(__file__).resolve().parent.parent.parent / "s0k1x-tokens" / "pricing" / "prices.json"
 _PRICE_KEY_RE = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
 _CLAUDE_GENERATION_RE = re.compile(
     r"(fable|mythos|opus|sonnet|haiku)[-._]?(\d+)(?:[-._](\d{1,2}))?(?![0-9])")
@@ -543,7 +543,7 @@ def _with_measure_cli(text: str) -> str:
     The sibling token-optimizer skill holds measure.py; when it is not there
     (a standalone fleet-auditor install) the bare form is left as written.
     """
-    script = Path(__file__).resolve().parents[2] / "token-optimizer" / "scripts" / "measure.py"
+    script = Path(__file__).resolve().parents[2] / "s0k1x-tokens" / "scripts" / "measure.py"
     if not script.is_file():
         return text
     try:

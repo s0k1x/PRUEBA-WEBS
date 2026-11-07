@@ -3111,7 +3111,7 @@ def _stable_marketplace_script_path(script_name):
         return None
     try:
         base = (_measure_facade.CLAUDE_DIR / "plugins" / "marketplaces").resolve(strict=False)
-        candidate = base / marketplace / "skills" / "token-optimizer" / "scripts" / script_name
+        candidate = base / marketplace / "skills" / "s0k1x-tokens" / "scripts" / script_name
         resolved = candidate.resolve(strict=True)
         if not resolved.is_file() or not resolved.is_relative_to(base):
             return None

@@ -2888,7 +2888,7 @@ def doctor(as_json=None):
         for _ in globmod.glob(str(plugin_cache / "*" / "token-optimizer" / "*")):
             is_plugin = True
             break
-    skill_link = _measure_facade.CLAUDE_DIR / "skills" / "token-optimizer"
+    skill_link = _measure_facade.CLAUDE_DIR / "skills" / "s0k1x-tokens"
     is_skill = skill_link.exists()
     if is_plugin:
         checks.append(("OK", "Install", "plugin mode"))

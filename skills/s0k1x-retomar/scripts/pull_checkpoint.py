@@ -30,7 +30,7 @@ from pathlib import Path
 # Bootstrap: measure.py lives in the sibling token-optimizer skill's scripts
 # dir. When run as a script (not imported), add it to sys.path before import.
 _HERE = Path(__file__).resolve().parent
-_TO_SCRIPTS = _HERE.parent.parent / "token-optimizer" / "scripts"
+_TO_SCRIPTS = _HERE.parent.parent / "s0k1x-tokens" / "scripts"
 if str(_TO_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_TO_SCRIPTS))
 

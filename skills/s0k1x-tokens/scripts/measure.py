@@ -1703,6 +1703,11 @@ _OWN_TOOL_SKILLS = frozenset({
     "token-optimizer:token-dashboard", "token-optimizer:fleet-auditor",
     "token-optimizer:resume-checkpoint",
     "token-optimizer:health", "token-optimizer:quick",
+    "s0k1x-tokens", "s0k1x-tokens-coach", "s0k1x-tokens-panel", "s0k1x-flota",
+    "s0k1x-retomar",
+    "s0k1x-skill:s0k1x-tokens", "s0k1x-skill:s0k1x-tokens-coach",
+    "s0k1x-skill:s0k1x-tokens-panel", "s0k1x-skill:s0k1x-flota",
+    "s0k1x-skill:s0k1x-retomar",
 })
 
 
