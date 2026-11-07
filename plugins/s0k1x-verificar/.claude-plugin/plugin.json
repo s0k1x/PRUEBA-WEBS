@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-verificar",
+  "version": "1.1.0",
+  "description": "Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

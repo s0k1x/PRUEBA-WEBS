@@ -12,6 +12,8 @@ Casos donde dos skills se pisan y qué hacer en cada uno.
 | `s0k1x-pulido` `animate` y `s0k1x-movimiento` opinan sobre una animación | Manda `s0k1x-movimiento`. `s0k1x-pulido` solo señala dónde falta o sobra movimiento. |
 | `s0k1x-movimiento` quiere un efecto llamativo en una web de clínica dental | Manda `s0k1x-estilo`: el nivel de movimiento depende del tipo de negocio. |
 | `s0k1x-estilo` `copy.md` y `s0k1x-humano` | `s0k1x-estilo` decide qué contar en cada sección y cuánto texto cabe; `s0k1x-humano` reescribe cómo suena, sin cambiar lo que dice. |
+| `s0k1x-estilo` trae un fragmento propio y `s0k1x-componentes` propone una pieza de la comunidad | Primero el fragmento propio si encaja; `s0k1x-componentes` le aplica el nivel de detalle. Una pieza de la comunidad solo si falta o si el usuario la pide, y siempre adaptada a los mismos tokens. |
+| `s0k1x-componentes` quiere un gesto llamativo (borde animado, spotlight) | Solo uno por página y dentro del nivel de movimiento de `s0k1x-estilo`. |
 | El comprobador de `s0k1x-estilo` y la auditoría de `s0k1x-pulido` dan avisos distintos | Se arreglan los dos; si chocan, gana el criterio de la dueña de esa decisión (tabla de SKILL.md). |
 
 ## Estilo de respuesta

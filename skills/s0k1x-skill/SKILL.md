@@ -5,7 +5,7 @@ description: Coordinador de s0k1x-skill. Úsala al empezar cualquier tarea en un
 
 # s0k1x-skill
 
-Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
+Este kit junta 34 skills (más esta), 3 subagentes y 3 mods. Cada skill sigue funcionando sola con su propio `SKILL.md`; esta skill decide **cuál usar, en qué orden y quién manda cuando dos opinan distinto**. No sustituye a ninguna: cuando elijas una, cárgala y sigue sus instrucciones.
 
 ## Regla de oro
 
@@ -15,6 +15,7 @@ Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando so
 |---|---|---|
 | Dirección de arte, estilo, referencias, fotos, originalidad | `s0k1x-estilo` | `s0k1x-pulido` |
 | Jerarquía, layout, tipografía, color, responsive, accesibilidad, crítica y pulido | `s0k1x-pulido` | `s0k1x-estilo` |
+| Cómo se construye cada pieza (botones, tarjetas, inputs, heros, precios, fondos, iconos, texturas) para que no sea genérica | `s0k1x-componentes` | `s0k1x-estilo` (tokens y fragmentos propios) |
 | Cuánto movimiento admite la web (nivel de contención según el tipo de negocio) | `s0k1x-estilo` (`references/motion.md`) | — |
 | Cómo se ejecuta cada animación (curvas, duración, hover, microinteracciones) | `s0k1x-movimiento` | `s0k1x-pulido` (no uses su modo `animate` si `s0k1x-movimiento` está disponible) |
 | Qué dice cada sección de la web (estructura del copy) | `s0k1x-estilo` (`references/copy.md`) | — |
@@ -35,6 +36,7 @@ Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando so
 - `s0k1x-estilo`: diseña webs con dirección de arte real, sin aspecto "hecho por IA". Trae referencias, fotos y un comprobador en navegador.
 - `s0k1x-pulido`: crítica, auditoría y pulido de interfaces (jerarquía, layout, tipografía, color, accesibilidad, responsive, estados vacíos, DESIGN.md).
 - `s0k1x-movimiento`: crea o audita animaciones con criterios de referencia de diseño de movimiento.
+- `s0k1x-componentes`: construye cada pieza con oficio (luz, estados, material, detalle tipográfico) y enseña a estudiar y usar componentes de la comunidad (21st.dev, Uiverse, registros de shadcn) respetando su licencia.
 
 **Escritura**
 - `s0k1x-humano`: reescribe texto con tono humano y quita los tics de IA.
@@ -76,12 +78,13 @@ Este kit junta 33 skills, 3 subagentes y 3 mods. Cada skill sigue funcionando so
 
 **Web nueva (landing, negocio, tienda, portafolio)**
 1. `s0k1x-estilo`: brief, dirección de arte, referencias y primera versión.
-2. `s0k1x-humano`: repasa todos los textos visibles antes de dar la web por buena.
-3. `s0k1x-movimiento`: añade solo el movimiento que tenga propósito.
-4. `s0k1x-pulido`: crítica y pulido final (jerarquía, accesibilidad, responsive).
-5. `s0k1x-verificar`: comprueba en navegador que cumple lo pedido y para.
+2. `s0k1x-componentes`: construye cada pieza con oficio dentro de esa dirección (estados, luz, material, recursos propios).
+3. `s0k1x-humano`: repasa todos los textos visibles antes de dar la web por buena.
+4. `s0k1x-movimiento`: añade solo el movimiento que tenga propósito.
+5. `s0k1x-pulido`: crítica y pulido final (jerarquía, accesibilidad, responsive).
+6. `s0k1x-verificar`: comprueba en navegador que cumple lo pedido y para.
 
-**Mejorar una web existente**: `s0k1x-pulido` (crítica) → si el problema es de estilo, `s0k1x-estilo` → `s0k1x-movimiento` (auditoría de animaciones) → `s0k1x-humano` (textos).
+**Mejorar una web existente**: `s0k1x-pulido` (crítica) → si el problema es de estilo, `s0k1x-estilo` → si las piezas se ven genéricas, `s0k1x-componentes` → `s0k1x-movimiento` (auditoría de animaciones) → `s0k1x-humano` (textos).
 
 **Bug**: `s0k1x-investigar` → `s0k1x-parche` → `s0k1x-breve-revisar` o `s0k1x-equipo-revisor` → `s0k1x-verificar`.
 

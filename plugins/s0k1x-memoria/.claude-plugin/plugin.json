@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-memoria",
+  "version": "1.1.0",
+  "description": "Maintain a per-repo s0k1x-memoria as a continuously curated runbook (not a session log). Activates EVERY session. Read and curate it before work, keep only recurring high-value guidance, organize by priority-sorted categories, and cap each category at top 10 items.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

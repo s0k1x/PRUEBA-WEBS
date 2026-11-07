@@ -1,0 +1,9 @@
+{
+  "name": "s0k1x-componentes",
+  "version": "1.1.0",
+  "description": "Construye componentes y recursos web bonitos y con oficio, que no parezcan genéricos ni \"hechos por IA\": botones, tarjetas, inputs, navegación, heros, precios, testimonios, galerías, fondos, iconos y texturas.",
+  "author": {
+    "name": "s0k1x"
+  },
+  "repository": "https://github.com/s0k1x/prueba-webs"
+}

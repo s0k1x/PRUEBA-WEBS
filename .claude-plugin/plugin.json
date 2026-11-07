@@ -1,7 +1,7 @@
 {
   "name": "s0k1x-skill",
-  "version": "1.0.0",
-  "description": "s0k1x-skill: kit unificado de skills para diseno web, escritura natural, ahorro de tokens, flujos de ingenieria y memoria por repo, con 3 mods (Portero, Vigilante y Panel). La skill s0k1x-skill coordina todas las demas.",
+  "version": "1.1.0",
+  "description": "s0k1x-skill: kit unificado de skills para diseno web y componentes con oficio, escritura natural, ahorro de tokens, flujos de ingenieria y memoria por repo, con 3 mods (Portero, Vigilante y Panel). La skill s0k1x-skill coordina todas las demas.",
   "author": {
     "name": "s0k1x"
   },
