@@ -97,6 +97,12 @@
       "skillPath": "skills/taste-skill/SKILL.md",
       "computedHash": "23b3930015c478034b222e1a015da03a962c8ab48aee9fb4f3f69d977034feaa"
     },
+    "fleet-auditor": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/fleet-auditor/SKILL.md",
+      "computedHash": "9b016a24be65cd52f85660355342aad9f09cb672f25ac817c0b28ddf8390748b"
+    },
     "humanizer": {
       "source": "blader/humanizer",
       "sourceType": "github",
@@ -139,6 +145,12 @@
       "skillPath": "SKILL.md",
       "computedHash": "cbf334225ff185844c4f947cfec40c47fd292b4a06d8894b5a697e532b5cf53f"
     },
+    "resume-checkpoint": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/resume-checkpoint/SKILL.md",
+      "computedHash": "285143dfe5126e6d79b6ec1f28fd195b7c2418babc245e0c9c2421089fedb9b9"
+    },
     "safe-refactor": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
@@ -150,6 +162,30 @@
       "sourceType": "github",
       "skillPath": "skills/surgical-patch/SKILL.md",
       "computedHash": "028b9c3574142d19639d9f8eb11fbb01c58479f8f441e957d598a7215e79f95d"
+    },
+    "token-coach": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/token-coach/SKILL.md",
+      "computedHash": "f1fca73921facd601f89d34174ae96ec4927362e6be957ef0ddd35e8431b1a06"
+    },
+    "token-dashboard": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/token-dashboard/SKILL.md",
+      "computedHash": "926b26b2a01117bda6eac4866c57be7e284f53039e5a6548cf289d688d753133"
+    },
+    "token-optimizer": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "skills/token-optimizer/SKILL.md",
+      "computedHash": "1f0ab7d485d0f068ef42b20c4e0bc14710763fde5c61da590c38a8cbdf1e7532"
+    },
+    "token-optimizer-output": {
+      "source": "alexgreensh/token-optimizer",
+      "sourceType": "github",
+      "skillPath": "devin/SKILL.md",
+      "computedHash": "757af7dc9ff6eddfe9349424fb5d46ff5c3b4f19d6fbac0ca8eaadff8101de0a"
     },
     "ultracave": {
       "source": "JuliusBrussee/caveman",
