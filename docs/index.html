@@ -39,7 +39,7 @@
 .pc-term__bar { display: flex; align-items: center; gap: 1.6cqw; font: 500 max(12px, 1.9cqw)/1 var(--font-text); color: #bdbdbd; padding-bottom: 1.4cqw; border-bottom: 1px solid rgb(255 255 255 / .1); }
 .pc-term__bar .ic { --ic-s: max(14px, 2.6cqw); }
 .pc-term__bar .ic-ink { filter: invert(1); }
-.pc-term__ln { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pc-term__ln { overflow-wrap: anywhere; }
 .pc-term__ln::before { content: "$ "; color: #7a7a7a; }
 .pc-term__ok { color: #7bd88f; }
 .pc-term__ok::before { content: "✓ "; }
@@ -55,15 +55,17 @@
 
 /* the hero collage on tablets and phones: a wide piece starts or ends on the collage's edge */
 @media (max-width: 1023px) {
-  .ly-collage .ly-piece[data-edge="l"] { left: 0 !important; }
-  .ly-collage .ly-piece[data-edge="r"] { left: auto !important; right: 0; }
+  .ly-collage .ly-piece[data-edge] { left: 0 !important; right: 0; width: auto !important; }
+  .ly-collage .ly-piece[data-edge="l"] { top: 2% !important; }
+  .ly-collage .ly-piece[data-edge="r"] { top: 50% !important; height: 48% !important; }
   .hero--triptych .hero__cta .btn { width: auto; }
 }
 @media (max-width: 639px) { .hero--triptych .hero__cta .btn { width: 100%; } }
 
 /* the one main action at one size: the hero's and the close's buttons match */
 .close--word .btn { height: 64px; padding-inline: var(--s-6); font-size: var(--t-lead); }
-@media (max-width: 1023px) { .close--word .btn { height: 56px; font-size: var(--t-body); } }
+@media (min-width: 1024px) and (max-width: 1279px) { .close--word .btn { height: 56px; font-size: var(--t-body); } }
+@media (max-width: 1023px) { .close--word .btn { height: 56px; } }
 .close__word { line-height: 1; }
 
 /* the selected tab in the primary button's fill */
@@ -80,7 +82,8 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
 .win__dots { display: flex; gap: 6px; } .win__dots i { width: 10px; height: 10px; border-radius: 50%; background: #3a3a3c; }
 .win__body { padding: 20px; display: grid; gap: 10px; font: 400 14px/1.55 var(--font-mono); }
 #instalar .frame, #skills .frame { --p-h: 600px; min-height: var(--p-h); background: var(--p-surface); }
-#flujo .frame { --p-h: 520px; min-height: var(--p-h); background: var(--p-surface); }
+#flujo .frame { --p-h: 480px; min-height: var(--p-h); background: var(--p-surface); }
+#flujo .fit { --fit-max: 760px; }
 .inst__row { display: flex; align-items: flex-start; gap: 12px; }
 .inst__row code { flex: 1; min-width: 0; white-space: normal; overflow-wrap: anywhere; font: 400 14px/1.55 var(--font-mono); }
 .inst__row code::before { content: "$ "; color: #8a8a8a; }
@@ -99,6 +102,12 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
 .flow__ln b { color: #ececec; font-weight: 500; } .flow__ln span { grid-column: 2; color: #a3a3a3; font-family: var(--font-text); font-size: 13px; }
 .flow__ln::before { content: "✓"; color: #7bd88f; grid-row: 1 / span 2; }
 #preguntas { margin-top: var(--s-8, 80px); }
+.tab-panels { min-height: 112px; }
+@media (max-width: 1279px) { #instalar .frame, #skills .frame { --p-h: 460px; } #flujo .frame { --p-h: 420px; } }
+@media (max-width: 639px) {
+  #instalar .frame, #skills .frame, #flujo .frame { --p-h: 320px; }
+  #preguntas { margin-top: 0; }
+}
 </style>
 </head>
 <body>
@@ -195,7 +204,7 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
     </div></div>
   </section>
 
-  <section class="section" id="instalar" aria-labelledby="instalar-h" style="--hm: 2">
+  <section class="section" id="instalar" aria-labelledby="instalar-h">
     <div class="wrap">
       <div class="grid">
         <div class="span-6">
@@ -225,16 +234,16 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
         </div>
         <div class="frame frame--split span-6 start-7">
           <div class="stage stage--fade-b">
-            <div id="s-claude" class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Claude Code</div><div class="win__body"><div class="inst__note">Kit completo</div><div class="inst__row"><code>/plugin marketplace add s0k1x/prueba-webs</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__row"><code>/plugin install s0k1x-skill@s0k1x-skill</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">En un paso, con Claude Code 2.1.275 o posterior</div><div class="inst__row"><code>/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note inst__note--ok">✓ 35 skills, 3 subagentes y 3 mods</div></div></div></div>
-            <div id="s-codex" hidden class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Codex</div><div class="win__body"><div class="inst__note">Todas las skills, con la coordinadora</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -s '*'</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">Para todos tus proyectos</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -g -s '*'</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note inst__note--ok">✓ Se invocan con $nombre, por ejemplo $s0k1x-pulido</div></div></div></div>
-            <div id="s-una" hidden class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Una skill</div><div class="win__body"><div class="inst__note">Claude Code, después de añadir el marketplace</div><div class="inst__row"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">Codex</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">s0k1x-flota, -retomar, -tokens-panel y -tokens-coach necesitan también s0k1x-tokens</div></div></div></div>
+            <div id="s-claude" class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui ui-win"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Claude Code</div><div class="win__body"><div class="inst__note">Kit completo</div><div class="inst__row"><code>/plugin marketplace add s0k1x/prueba-webs</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__row"><code>/plugin install s0k1x-skill@s0k1x-skill</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">En un paso, con Claude Code 2.1.275 o posterior</div><div class="inst__row"><code>/plugin install s0k1x-skill --marketplace s0k1x/prueba-webs</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note inst__note--ok">✓ 35 skills, 3 subagentes y 3 mods</div></div></div></div>
+            <div id="s-codex" hidden class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui ui-win"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Codex</div><div class="win__body"><div class="inst__note">Todas las skills, con la coordinadora</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -s '*'</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">Para todos tus proyectos</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -g -s '*'</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note inst__note--ok">✓ Se invocan con $nombre, por ejemplo $s0k1x-pulido</div></div></div></div>
+            <div id="s-una" hidden class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px"><div class="win ui ui-win"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>Una skill</div><div class="win__body"><div class="inst__note">Claude Code, después de añadir el marketplace</div><div class="inst__row"><code>/plugin install s0k1x-componentes@s0k1x-skill</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">Codex</div><div class="inst__row"><code>npx skills add s0k1x/prueba-webs -a codex -s s0k1x-componentes</code><button class="inst__copy" type="button">Copiar</button></div><div class="inst__gap"></div><div class="inst__note">s0k1x-flota, -retomar, -tokens-panel y -tokens-coach necesitan también s0k1x-tokens</div></div></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="skills" aria-labelledby="skills-h" style="--hm: 2">
+  <section class="section" id="skills" aria-labelledby="skills-h">
     <div class="wrap">
       <div class="grid">
         <div class="span-6">
@@ -245,27 +254,25 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
         </div>
         <div class="frame frame--split span-6 start-7">
           <div class="stage stage--fade-b">
-            <div class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px" role="img" aria-label="La carpeta skills del kit, agrupada en diseño web, textos, ingeniería, tokens, respuestas breves, memoria y coordinación"><div class="win ui"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>skills/</div><div class="win__body"><div class="tree__dir">diseño-web/</div><div class="tree__ln">s0k1x-estilo, s0k1x-componentes, s0k1x-movimiento, s0k1x-pulido</div><div class="tree__dir">textos/</div><div class="tree__ln">s0k1x-humano</div><div class="tree__dir">ingeniería/</div><div class="tree__ln">s0k1x-investigar, s0k1x-parche, s0k1x-construir, s0k1x-refactor, s0k1x-migrar, s0k1x-verificar</div><div class="tree__dir">tokens/</div><div class="tree__ln">s0k1x-tokens, s0k1x-tokens-panel, s0k1x-tokens-coach, s0k1x-tokens-salida, s0k1x-flota, s0k1x-retomar</div><div class="tree__dir">breves/</div><div class="tree__ln">s0k1x-breve + 14 más, s0k1x-equipo</div><div class="tree__dir">memoria/</div><div class="tree__ln">s0k1x-memoria</div><div class="tree__dir">coordinación/</div><div class="tree__ln">s0k1x-skill</div></div></div></div>
+            <div class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px" role="img" aria-label="La carpeta skills del kit, agrupada en diseño web, textos, ingeniería, tokens, respuestas breves, memoria y coordinación"><div class="win ui ui-win"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>skills/</div><div class="win__body"><div class="tree__dir">diseño-web/</div><div class="tree__ln">s0k1x-estilo, s0k1x-componentes, s0k1x-movimiento, s0k1x-pulido</div><div class="tree__dir">textos/</div><div class="tree__ln">s0k1x-humano</div><div class="tree__dir">ingeniería/</div><div class="tree__ln">s0k1x-investigar, s0k1x-parche, s0k1x-construir, s0k1x-refactor, s0k1x-migrar, s0k1x-verificar</div><div class="tree__dir">tokens/</div><div class="tree__ln">s0k1x-tokens, s0k1x-tokens-panel, s0k1x-tokens-coach, s0k1x-tokens-salida, s0k1x-flota, s0k1x-retomar</div><div class="tree__dir">breves/</div><div class="tree__ln">s0k1x-breve + 14 más, s0k1x-equipo</div><div class="tree__dir">memoria/</div><div class="tree__ln">s0k1x-memoria</div><div class="tree__dir">coordinación/</div><div class="tree__ln">s0k1x-skill</div></div></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section g2" id="flujo" aria-labelledby="flujo-h" style="--hm: 3">
+  <section class="section g2 g2m" id="flujo" aria-labelledby="flujo-h">
     <div class="wrap">
       <div class="group">
         <div class="grid">
-          <div class="span-6">
-            <div class="section-head">
-              <h2 id="flujo-h">6 skills para una web nueva</h2>
-              <p class="muted">Pides la web con normalidad. s0k1x-skill encadena seis skills y cada una se ocupa de una sola decisión.</p>
-            </div>
+          <div class="section-head span-5">
+            <h2 id="flujo-h">6 skills para una web nueva</h2>
           </div>
-          <div class="frame frame--split span-6 start-7">
-            <div class="stage stage--fade-b">
-              <div class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px" role="img" aria-label="Una petición de web para una peluquería y las seis skills que la resuelven en orden"><div class="win ui"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>s0k1x-skill</div><div class="win__body"><div class="flow__me">Hazme una web para una peluquería</div><div class="flow__ln"><b>s0k1x-estilo</b><span>Elige paleta, tipografía y el hero de la peluquería</span></div><div class="flow__ln"><b>s0k1x-componentes</b><span>Construye la reserva, la carta de precios y la galería</span></div><div class="flow__ln"><b>s0k1x-humano</b><span>Reescribe los textos para que suenen naturales</span></div><div class="flow__ln"><b>s0k1x-movimiento</b><span>Deja solo las animaciones con sentido</span></div><div class="flow__ln"><b>s0k1x-pulido</b><span>Revisa jerarquía, contraste y móvil</span></div><div class="flow__ln"><b>s0k1x-verificar</b><span>Comprueba la web en el navegador y para</span></div></div></div></div>
-            </div>
+          <p class="muted span-6 start-7">Pides la web con normalidad. s0k1x-skill encadena seis skills y cada una se ocupa de una sola decisión.</p>
+        </div>
+        <div class="frame">
+          <div class="stage stage--fade-b">
+            <div class="at-rise fit to-edge" style="--ax: 32px; --ay: 32px; --cut: 0px" role="img" aria-label="Una petición de web para una peluquería y las seis skills que la resuelven en orden"><div class="win ui ui-win"><div class="win__head"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>s0k1x-skill</div><div class="win__body"><div class="flow__me">Hazme una web para una peluquería</div><div class="flow__ln"><b>s0k1x-estilo</b><span>Elige paleta, tipografía y el hero de la peluquería</span></div><div class="flow__ln"><b>s0k1x-componentes</b><span>Construye la reserva, la carta de precios y la galería</span></div><div class="flow__ln"><b>s0k1x-humano</b><span>Reescribe los textos para que suenen naturales</span></div><div class="flow__ln"><b>s0k1x-movimiento</b><span>Deja solo las animaciones con sentido</span></div><div class="flow__ln"><b>s0k1x-pulido</b><span>Revisa jerarquía, contraste y móvil</span></div><div class="flow__ln"><b>s0k1x-verificar</b><span>Comprueba la web en el navegador y para</span></div></div></div>
           </div>
         </div>
       </div>
@@ -273,8 +280,8 @@ html:not([data-motion="off"]) .tabs.m-has-ind .tab[aria-selected="true"] { color
         <div class="faq span-6 start-7">
           <div class="faq__item"><h3>¿Instalo el kit o skills sueltas?</h3><p>Una de las dos cosas. Si instalas ambas, la misma skill aparece dos veces con nombres distintos.</p></div>
           <div class="faq__item"><h3>¿Qué cambia en Codex?</h3><p>Las skills y los flujos son los mismos. Los subagentes y los mods solo existen en Claude Code.</p></div>
-          <div class="faq__item"><h3>¿Puedo modificar el código?</h3><p>No. La licencia permite instalar y usar el kit tal cual. Las skills de otros autores conservan su licencia.</p></div>
-          <div class="faq__item"><h3>¿Envía datos fuera?</h3><p>Solo s0k1x-breve-comprimir y las skills de la nube externa, y siempre piden permiso antes.</p></div>
+          <div class="faq__item"><h3>¿Puedo modificar el código del kit?</h3><p>No. La licencia permite instalar y usar el kit tal cual. Las skills de otros autores conservan su licencia.</p></div>
+          <div class="faq__item"><h3>¿El kit envía datos fuera?</h3><p>Solo s0k1x-breve-comprimir y las skills de la nube externa, y siempre piden permiso antes.</p></div>
         </div>
       </div>
     </div>
