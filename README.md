@@ -39,7 +39,17 @@ O en un paso, en Claude Code 2.1.275 o posterior:
 /plugin install s0k1x-skill --marketplace s0k1x/prueba-webs
 ```
 
-Para probarlo sin instalarlo, desde una copia local del repo: `claude --plugin-dir .`
+## Descarga
+
+```
+git clone https://github.com/s0k1x/prueba-webs.git
+```
+
+O descarga el [ZIP](https://github.com/s0k1x/prueba-webs/archive/refs/heads/main.zip). Para probarlo sin instalarlo, desde la carpeta descargada: `claude --plugin-dir .`
+
+## Web
+
+La página del kit está en [`docs/index.html`](docs/index.html). Para publicarla, activa GitHub Pages en *Settings → Pages* con la rama `main` y la carpeta `/docs`.
 
 ## Uso
 
@@ -52,6 +62,8 @@ Algunas skills necesitan tu permiso explícito: las skills de la nube externa y 
 - Los mods necesitan una versión de Claude Code con soporte de mods (`hooks.json` con `modules`). Sin ella, las skills funcionan igual.
 - Algunas skills usan Python 3 (`s0k1x-tokens`, `s0k1x-flota`, `s0k1x-retomar`) o descargan un binario la primera vez (`s0k1x-pulido`).
 
-## Licencias
+## Licencia
 
-Las skills son de sus autores y conservan sus licencias; consulta [AVISOS.md](AVISOS.md). `s0k1x-tokens` usa PolyForm Noncommercial, que no permite el uso comercial.
+**Uso restringido.** Puedes instalar y usar `s0k1x-skill` tal cual. Está prohibido modificarlo, crear versiones derivadas, redistribuirlo o publicarlo como propio sin permiso escrito de s0k1x. Los términos completos están en [LICENSE](LICENSE).
+
+Las skills de otros autores incluidas en el kit conservan sus propias licencias, indicadas en [AVISOS.md](AVISOS.md). `s0k1x-tokens` y sus skills hermanas usan PolyForm Noncommercial, que no permite el uso comercial.

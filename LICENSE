@@ -1,28 +1,65 @@
-MIT License (solo archivos propios)
+LICENCIA DE USO RESTRINGIDO DE s0k1x-skill
+Versión 1.0
 
-Copyright (c) 2026 s0k1x
+Copyright (c) 2026 s0k1x. Todos los derechos reservados.
 
-Esta licencia cubre unicamente los archivos propios de este repositorio:
-skills/s0k1x-skill/, agents/, hooks/, types/, .claude-plugin/,
-README.md y AVISOS.md.
+1. OBRA PROTEGIDA
 
-Las demas carpetas de skills/ son de terceros y se rigen por sus propias
-licencias, indicadas en AVISOS.md.
+Esta licencia cubre la "Obra Propia": todos los archivos de este repositorio
+creados por s0k1x, en concreto skills/s0k1x-skill/, agents/, hooks/, types/,
+.claude-plugin/, docs/, README.md, AVISOS.md y esta licencia, así como la
+selección, organización, nombres y coordinación del conjunto del kit.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of the files covered above (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software,
-and to permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Los componentes de terceros incluidos en las demás carpetas de skills/ NO están
+cubiertos por esta licencia: se rigen por las licencias de sus autores, que se
+indican en AVISOS.md y que prevalecen sobre esta licencia en lo que respecta a
+esos componentes.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. LO QUE SE PERMITE
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Se concede a cada persona que obtenga una copia legítima un permiso limitado,
+personal, no exclusivo, intransferible y revocable para:
+
+  a) instalar el plugin s0k1x-skill en Claude Code desde el repositorio oficial
+     (https://github.com/s0k1x/prueba-webs) mediante los comandos de
+     instalación publicados, y
+  b) usarlo tal cual, sin cambios, en sus propios proyectos.
+
+3. LO QUE SE PROHÍBE
+
+Salvo autorización previa y por escrito de s0k1x, queda prohibido, respecto a
+la Obra Propia:
+
+  a) modificar, adaptar, traducir o alterar cualquier archivo, en todo o en
+     parte;
+  b) crear obras derivadas, incluidas versiones renombradas, reempaquetadas o
+     combinadas con otras skills o plugins;
+  c) copiar, redistribuir, publicar, sublicenciar, vender, alquilar o ceder la
+     Obra Propia, por cualquier medio, con o sin ánimo de lucro;
+  d) publicar o distribuir el kit, o una parte de él, como si fuera propio o
+     bajo otro nombre;
+  e) eliminar, ocultar o alterar avisos de autoría, de copyright o de licencia,
+     incluido AVISOS.md;
+  f) usar el nombre "s0k1x" o "s0k1x-skill" para identificar productos o
+     servicios que no sean de s0k1x.
+
+Las copias que hagan de forma automática Claude Code, git o GitHub únicamente
+para instalar y usar el plugin conforme al apartado 2 no se consideran
+redistribución.
+
+4. TERMINACIÓN
+
+Cualquier incumplimiento pone fin de forma automática e inmediata a los
+permisos de esta licencia. Al terminar, se debe dejar de usar la Obra Propia y
+eliminar todas las copias.
+
+5. SIN GARANTÍA
+
+LA OBRA SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA. EN NINGÚN CASO s0k1x SERÁ RESPONSABLE DE DAÑOS, PÉRDIDAS DE DATOS O
+CUALQUIER OTRA RESPONSABILIDAD DERIVADA DEL USO DE LA OBRA.
+
+6. CONTACTO
+
+Para solicitar permisos adicionales, contacta con s0k1x a través de
+https://github.com/s0k1x.
